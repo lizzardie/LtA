@@ -7,7 +7,6 @@
     <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
     <script>
         const { animate } = anime;
-        anime.createDraggable('.square');
         anime.animate();
         anime.createTimeline();
         
@@ -26,8 +25,18 @@
     <title>Document</title>
 </head>
 <body>
+    <script>anime.createDraggable('.artbox');</script>
     <div class="artbox">
-        <div><img src="/LtA/gallery/LtA_edmund.webp" class="art" alt=""></div>
+        <div><img src="/LtA/gallery/LtA_embrelle.webp" class="artmini" alt="">
+        <p class="caption">Embrelle</p></div>
+        <div><img src="/LtA/gallery/LtA_edmund.webp" class="artmini" alt="">
+        <p class="caption">Edmund</p></div>
+        <div><img src="/LtA/gallery/LtA_lotz.webp" class="artmini" alt="">
+        <p class="caption">Lotz</p></div>
+        <div><img src="/LtA/gallery/LtA_stirgio.webp" class="artmini" alt="">
+        <p class="caption">Stirgio</p></div>
+
+
     </div>
     <p>provide a bank of PC and NPC images-one for each to keep things simple-and then editable text boxes and use draggable so people can set up their conspiracy theory boards as they wish</p>
 </body>

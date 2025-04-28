@@ -19,10 +19,21 @@ p {
     font-family: courier;
     font-size: 150%;
 }
+.caption{
+    text-align: center;
+    color: white;
+    font-family: courier;
+    font-size: 100%;
+}
 .art{
     width: 256px;
     height: 256px;
     border: 8px black;
+}
+.artmini{
+    width: 128px;
+    height: 128px;
+    border: 4px black;
 }
 .button {
     font: bold 100% courier;
