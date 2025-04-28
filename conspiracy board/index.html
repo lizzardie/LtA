@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
     <script>
         const { animate } = anime;
-        anime.createDraggable();
+        anime.createDraggable('.square');
         anime.animate();
         anime.createTimeline();
         
@@ -15,6 +15,9 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="large row centered">
+        <div class="square draggable"></div>
+    </div>
     <p>provide a bank of PC and NPC images-one for each to keep things simple-and then editable text boxes and use draggable so people can set up their conspiracy theory boards as they wish</p>
 </body>
 </html>
