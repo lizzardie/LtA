@@ -19,6 +19,11 @@ p {
     font-family: courier;
     font-size: 150%;
 }
+.art{
+    width: 256px;
+    height: 256px;
+    border: 8px black;
+}
 .button {
     font: bold 100% courier;
     text-decoration: none;
