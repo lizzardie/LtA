@@ -60,3 +60,10 @@ p {
     height:fit-content;
     border: 20px black;
 }
+.gridcontainer{
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+}
