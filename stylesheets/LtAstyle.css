@@ -30,6 +30,15 @@ p {
     height: 256px;
     border: 8px black;
 }
+.artbox {
+    width: 25%;
+    height: fit-content;
+    background-color:#333;
+    border: 8px whitesmoke;
+    padding: 8px;
+    margin: 8px;
+    float: left;
+}
 .artmini{
     width: 128px;
     height: 128px;
