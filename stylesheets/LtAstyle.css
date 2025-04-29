@@ -55,3 +55,8 @@ p {
     border-bottom: 1px solid #333333;
     border-left: 1px solid #CCCCCC;
 }
+.dragbox{
+    width:fit-content;
+    height:fit-content;
+    border: 20px black;
+}
