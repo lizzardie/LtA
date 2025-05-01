@@ -1,4 +1,3 @@
-
 h1 {
     text-align: center;
     color: whitesmoke;
@@ -16,6 +15,14 @@ p {
     color: whitesmoke;
     font-family: courier;
     font-size: 150%;
+}
+.fpimg{
+    width: 256px;
+    height: 256px;
+    border: 8px black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .caption{
     text-align: center;
@@ -87,6 +94,8 @@ p {
     border-width: 20px;
 }
 .gridcontainer{
+    background-image: radial-gradient(whitesmoke 1px, transparent 0);
+    float: right;
     width: auto;
     height: auto;
     display: grid;
@@ -95,4 +104,20 @@ p {
 }
 body {
     background-color: #333333;
+}
+.NPCgallery {
+    display: grid;
+    grid-auto-flow: row dense;
+    gap: 24px;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    justify-content: space-evenly; 
+}
+.PCgallery{
+    display: grid;
+    grid-auto-flow: row dense;
+    gap: 24px;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    justify-content: space-evenly;
 }
