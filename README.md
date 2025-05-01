@@ -1,8 +1,8 @@
-#FINAL PROJECT PROPOSAL
+# FINAL PROJECT PROPOSAL
 
-I will be making an interactive website for the DnD camapign, License to Adventure, that I am in. I am inspired by the usefulness of online tools like DnD Beyond, digital dice sets, art portfolio websites, and 
+I will be making an interactive website for the DnD camapign, License to Adventure, that I am in. I am inspired by the usefulness of online tools like DnD Beyond, digital dice sets, and WorldAnvil. I am also inspired by 
 
-###STEPS
+### STEPS
 
 - Standardize formatting by using an external stylesheet, including borders, size ratios, and naming conventions
 	- need to learn details of what is necessary to include, and in what order
@@ -22,7 +22,7 @@ I will be making an interactive website for the DnD camapign, License to Adventu
 	- syntehsize and properly format all images
 
 
-###ACTION PLAN
+### ACTION PLAN
 
 I have been jumping between several of these steps as I start working on something, figure a couple things out/get frustrated at roadblocks, and then move on to a different challenge so as to not stagnate too long. I regularly look up information/ask for help with things I truly don't understand, and apply what I learn. 
 
