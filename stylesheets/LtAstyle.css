@@ -27,14 +27,16 @@ p {
     width: 256px;
     height: 256px;
     border-style: solid;
-    border: 8px black;
+    border: black;
+    border-width: 8px;
 }
 .artbox {
     width: 25%;
     height: fit-content;
     background-color:#333;
     border-style: solid;
-    border: 16px whitesmoke;
+    border: whitesmoke;
+    border-width: 16px;
     padding: 8px;
     margin: 8px;
     float: left;
@@ -43,7 +45,8 @@ p {
     width: 128px;
     height: 128px;
     border-style: solid;
-    border: 4px black;
+    border: black;
+    border-width: 4px;
 }
 .button {
     font: bold 100% courier;
@@ -72,7 +75,7 @@ p {
     height: 16px;
     background-color: whitesmoke;
     border-radius: 50%;
-    
+
 }
 .btn-roll-dice{
     margin-top: 8px;
@@ -80,7 +83,8 @@ p {
 .dragbox{
     width:fit-content;
     height:fit-content;
-    border: 20px black;
+    border: black;
+    border-width: 20px;
 }
 .gridcontainer{
     width: auto;
