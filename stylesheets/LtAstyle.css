@@ -1,27 +1,25 @@
-body {
-    background-color: #333333;
-}
+
 h1 {
     text-align: center;
-    color: white;
+    color: whitesmoke;
     font-family: courier;
     font-size: 250%;
 }
 h3 {
     text-align: center;
-    color: white;
+    color: whitesmoke;
     font-family: courier;
     font-size: 200%;
 }
 p {
     text-align: center;
-    color: white;
+    color: whitesmoke;
     font-family: courier;
     font-size: 150%;
 }
 .caption{
     text-align: center;
-    color: white;
+    color: whitesmoke;
     font-family: courier;
     font-size: 75%;
 }
@@ -58,6 +56,27 @@ p {
     border-bottom: 1px solid #333333;
     border-left: 1px solid #CCCCCC;
 }
+.dice-container{
+    display: flex;
+}
+.dice{
+    width: 64;
+    height: 64;
+    position: relative;
+    margin: 4px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px whitesmoke;
+}
+.dice-dot{
+    width: 16 px;
+    height: 16px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    
+}
+.btn-roll-dice{
+    margin-top: 8px;
+}
 .dragbox{
     width:fit-content;
     height:fit-content;
@@ -68,5 +87,8 @@ p {
     height: auto;
     display: grid;
     grid-template-columns: repeat(20, 1fr);
-    grid-template-rows: repeat(20, 1fr);
+    grid-template-rows: auto;
+}
+body {
+    background-color: #333333;
 }
