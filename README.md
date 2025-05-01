@@ -21,6 +21,8 @@ I will be making an interactive website for the DnD camapign, License to Adventu
 	- syntehsize PC information to create pages for their main information
 - Gallery/Atlas
 	- syntehsize and properly format all images
+- Task Checklist
+	- format a customizeable list
 
 
 ### ACTION PLAN

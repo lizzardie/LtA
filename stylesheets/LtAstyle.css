@@ -20,6 +20,7 @@ p {
     width: 256px;
     height: 256px;
     border: black;
+    border-style: solid;
     border-width: 8px;
     display: block;
     margin-left: auto;
@@ -44,7 +45,7 @@ p {
     background-color:#333;
     border: whitesmoke;
     border-style: solid;
-    border-width: 16px;
+    border-width: 8px;
     padding: 8px;
     margin: 8px;
     float: left;
@@ -76,13 +77,23 @@ p {
     position: relative;
     margin: 4px;
     border-radius: 8px;
+    border: whitesmoke;
+    border-width: 8px;
     box-shadow: 0 0 10px whitesmoke;
 }
 .dice-dot{
+    --top: 0%;
+    --left: 0%;
+
     width: 16 px;
     height: 16px;
     background-color: whitesmoke;
     border-radius: 50%;
+    /* dot positioning */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 
 }
 .btn-roll-dice{
@@ -95,13 +106,14 @@ p {
     border-width: 20px;
 }
 .gridcontainer{
-    background-image: radial-gradient(whitesmoke 1px, transparent 0);
+    display: grid;
+    background-image: linear-gradient(whitesmoke 1px, transparent 0);
     float: right;
     width: auto;
     height: auto;
-    display: grid;
-    grid-template-columns: repeat(20, 1fr);
+    grid-template-columns: auto auto auto auto auto auto;
     grid-template-rows: auto;
+    background-color:#333333;
 }
 body {
     background-color: #333333;
