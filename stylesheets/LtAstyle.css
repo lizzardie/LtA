@@ -40,7 +40,7 @@ p {
     border-width: 8px;
 }
 .artbox {
-    width: 25%;
+    width: 140px;
     height: fit-content;
     background-color:#333;
     border: whitesmoke;
@@ -57,6 +57,7 @@ p {
     border: black;
     border-style: solid;
     border-width: 8px;
+    margin: 8px;
 }
 .artmini{
     width: 128px;
@@ -77,7 +78,8 @@ p {
     border-left: 1px solid #CCCCCC;
 }
 .gridcontainer{
-    width: 75%;
+    width: auto;
+    height: auto;
     display: grid;
     border: whitesmoke;
     border-style: solid;
@@ -86,8 +88,6 @@ p {
     margin: 8px;
     background-image: linear-gradient(whitesmoke 1px, transparent 0);
     float: right;
-    width: auto;
-    height: auto;
     grid-template-columns: auto auto auto auto auto auto;
     grid-template-rows: auto;
     background-color:#333333;
