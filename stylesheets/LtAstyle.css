@@ -158,8 +158,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-
 }
 .btn-roll-dice{
-    margin-top: 8px;
+    width: 48px;
+    margin: 8px;
 }
