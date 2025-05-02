@@ -40,7 +40,7 @@ p {
     border-width: 8px;
 }
 .artbox {
-    width: 140px;
+    width: fit-content;
     height: fit-content;
     background-color:#333;
     border: whitesmoke;
@@ -51,13 +51,14 @@ p {
     float: left;
 }
 .dragbox{
-    width: 132px;
+    width: 136px;
     height: 164px;
     display: grid;
     border: black;
     border-style: solid;
     border-width: 8px;
     margin: 8px;
+    padding: 6px;
 }
 .artmini{
     width: 128px;
@@ -65,6 +66,8 @@ p {
     border: black;
     border-style: solid;
     border-width: 4px;
+    padding: 4px;
+    margin: 4px;
 }
 .button {
     font: bold 100% courier;
@@ -78,7 +81,7 @@ p {
     border-left: 1px solid #CCCCCC;
 }
 .gridcontainer{
-    width: auto;
+    width: max-content;
     height: auto;
     display: grid;
     border: whitesmoke;
