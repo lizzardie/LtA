@@ -16,6 +16,13 @@ p {
     font-family: courier;
     font-size: 150%;
 }
+.topsection{
+    background-color: #333333;
+    display: grid;
+    width: 100vw;
+    height: fit-content;
+
+}
 .fpimg{
     width: 256px;
     height: 256px;
