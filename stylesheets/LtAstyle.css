@@ -140,6 +140,7 @@ body {
     height: 64px;
     position: relative;
     margin: 8px;
+    background-color: whitesmoke;
     border: whitesmoke;
     border-style: solid;
     border-radius: 8px;
