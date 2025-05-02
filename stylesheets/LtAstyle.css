@@ -99,6 +99,7 @@ p {
 }
 .entireboard{
     display: grid;
+    grid-template-columns: auto auto;
     background-size: cover;
     background-color:#333333;
     border: whitesmoke;
