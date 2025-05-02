@@ -115,6 +115,11 @@ p {
     grid-template-rows: auto;
     background-color:#333333;
 }
+.entireboard{
+    display: grid;
+    background-size: cover;
+    background-color:#333333;
+}
 body {
     background-color: #333333;
 }
