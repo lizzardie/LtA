@@ -111,6 +111,11 @@ p {
 }
 .gridcontainer{
     display: grid;
+    border: whitesmoke;
+    border-style: solid;
+    border-width: 8px;
+    padding: 8px;
+    margin: 8px;
     background-image: linear-gradient(whitesmoke 1px, transparent 0);
     float: right;
     width: auto;
