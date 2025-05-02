@@ -58,7 +58,7 @@ p {
 }
 .drag-box{
     width: 136px;
-    height: 164px;
+    height: 168px;
     display: grid;
     border: black;
     border-style: solid;
@@ -87,7 +87,7 @@ p {
     border-left: 1px solid #CCCCCC;
 }
 .grid-container{
-    width: 100%;
+    width: 75%;
     height: auto;
     display: grid;
     border: whitesmoke;
@@ -135,20 +135,6 @@ body {
     width: 100vw;
     height: fit-content;
 }
-.dice-dot{
-    --top: 0%;
-    --left: 0%;
-
-    width: 16 px;
-    height: 16px;
-    background-color:#333333;
-    border-radius: 50%;
-    /* dot positioning */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-}
 .dice{
     width: 64px;
     height: 64px;
@@ -160,8 +146,22 @@ body {
     border-radius: 8px;
     border-width: 8px;
 }
+.dice-dot{
+    width: 16px;
+    height: 16px;
+    background-color:#333333;
+    border-radius: 50%;
+    /* dot positioning */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
 .btn-roll-dice{
     width: 48px;
     margin: 8px;
-    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
