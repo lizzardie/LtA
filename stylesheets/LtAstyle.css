@@ -52,7 +52,7 @@ p {
 }
 .dragbox{
     width: 132px;
-    height: fit-content;
+    height: 148px;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto;
@@ -78,39 +78,8 @@ p {
     border-bottom: 1px solid #333333;
     border-left: 1px solid #CCCCCC;
 }
-.dice-container{
-    display: grid;
-}
-.dice{
-    width: 64;
-    height: 64;
-    position: relative;
-    margin: 4px;
-    border-radius: 8px;
-    border: whitesmoke;
-    border-width: 8px;
-    box-shadow: 0 0 10px whitesmoke;
-}
-.dice-dot{
-    --top: 0%;
-    --left: 0%;
-
-    width: 16 px;
-    height: 16px;
-    background-color: whitesmoke;
-    border-radius: 50%;
-    /* dot positioning */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-
-}
-.btn-roll-dice{
-    margin-top: 8px;
-}
 .gridcontainer{
-    width: 75%;
+    width: 65%;
     display: grid;
     border: whitesmoke;
     border-style: solid;
@@ -152,4 +121,35 @@ body {
     grid-template-columns: auto auto auto auto;
     grid-template-rows: auto;
     justify-content: space-evenly;
+}
+.dice-container{
+    display: grid;
+}
+.dice{
+    width: 64;
+    height: 64;
+    position: relative;
+    margin: 4px;
+    border-radius: 8px;
+    border: whitesmoke;
+    border-width: 8px;
+    box-shadow: 0 0 10px whitesmoke;
+}
+.dice-dot{
+    --top: 0%;
+    --left: 0%;
+
+    width: 16 px;
+    height: 16px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    /* dot positioning */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+}
+.btn-roll-dice{
+    margin-top: 8px;
 }
