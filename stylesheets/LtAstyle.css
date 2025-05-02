@@ -57,7 +57,7 @@ p {
     float: left;
 }
 .drag-box{
-    width: 132px;
+    width: 136px;
     height: 164px;
     display: grid;
     border: black;
@@ -87,7 +87,7 @@ p {
     border-left: 1px solid #CCCCCC;
 }
 .grid-container{
-    width: auto;
+    width: 100%;
     height: auto;
     display: grid;
     border: whitesmoke;
@@ -103,7 +103,7 @@ p {
 }
 .entire-board{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 136px auto;
     background-size: cover;
     background-color:#333333;
     border: whitesmoke;
