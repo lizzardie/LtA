@@ -52,7 +52,7 @@ p {
 }
 .dragbox{
     width: 132px;
-    height: 148px;
+    height: 164px;
     display: grid;
     grid-auto-flow: row dense;
     gap: 8px;
@@ -82,7 +82,7 @@ p {
     border-left: 1px solid #CCCCCC;
 }
 .gridcontainer{
-    width: 65%;
+    width: 50%;
     display: grid;
     border: whitesmoke;
     border-style: solid;
