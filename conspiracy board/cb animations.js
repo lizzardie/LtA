@@ -3,6 +3,6 @@ const { animate } = anime;
 const draggable = createDraggable();
 
 anime.createDraggable(".dragbox", {
-    container: ".gridcontainer",
+    container: ".entireboard",
 });
 
