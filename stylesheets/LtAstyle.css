@@ -16,14 +16,13 @@ p {
     font-family: courier;
     font-size: 150%;
 }
-.topsection{
+.top-section{
     background-color: #333333;
     display: grid;
     width: 100vw;
     height: fit-content;
-
 }
-.fpimg{
+.fp-img{
     width: 256px;
     height: 256px;
     border: black;
@@ -46,7 +45,7 @@ p {
     border-style: solid;
     border-width: 8px;
 }
-.artbox {
+.art-box {
     width: fit-content;
     height: fit-content;
     background-color:#333;
@@ -57,7 +56,7 @@ p {
     margin: 8px;
     float: left;
 }
-.dragbox{
+.drag-box{
     width: 136px;
     height: 164px;
     display: grid;
@@ -67,7 +66,7 @@ p {
     margin: 8px;
     padding: 6px;
 }
-.artmini{
+.art-mini{
     width: 128px;
     height: 128px;
     border: black;
@@ -87,7 +86,7 @@ p {
     border-bottom: 1px solid #333333;
     border-left: 1px solid #CCCCCC;
 }
-.gridcontainer{
+.grid-container{
     width: max-content;
     height: auto;
     display: grid;
@@ -102,7 +101,7 @@ p {
     grid-template-rows: auto;
     background-color:#333333;
 }
-.entireboard{
+.entire-board{
     display: grid;
     grid-template-columns: auto auto;
     background-size: cover;
@@ -115,7 +114,7 @@ p {
 body {
     background-color: #333333;
 }
-.NPCgallery {
+.NPC-gallery {
     display: grid;
     grid-auto-flow: row dense;
     gap: 24px;
@@ -123,7 +122,7 @@ body {
     grid-template-rows: auto;
     justify-content: space-evenly; 
 }
-.PCgallery{
+.PC-gallery{
     display: grid;
     grid-auto-flow: row dense;
     gap: 24px;
@@ -133,6 +132,8 @@ body {
 }
 .dice-container{
     display: grid;
+    width: 100vw;
+    height: fit-content;
 }
 .dice{
     width: 64;
