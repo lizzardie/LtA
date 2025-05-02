@@ -54,11 +54,6 @@ p {
     width: 132px;
     height: 164px;
     display: grid;
-    grid-auto-flow: row dense;
-    gap: 8px;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto;
-    justify-content: space-evenly;
     border: black;
     border-style: solid;
     border-width: 8px;
@@ -82,7 +77,7 @@ p {
     border-left: 1px solid #CCCCCC;
 }
 .gridcontainer{
-    width: 50%;
+    width: 75%;
     display: grid;
     border: whitesmoke;
     border-style: solid;
