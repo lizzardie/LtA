@@ -87,7 +87,7 @@ p {
     border-left: 1px solid #CCCCCC;
 }
 .grid-container{
-    width: 100%;
+    width: auto;
     height: auto;
     display: grid;
     border: whitesmoke;
