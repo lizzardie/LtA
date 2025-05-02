@@ -136,15 +136,14 @@ body {
     height: fit-content;
 }
 .dice{
-    width: 64;
-    height: 64;
+    width: 64px;
+    height: 64px;
     position: relative;
-    margin: 4px;
+    margin: 8px;
     border: whitesmoke;
     border-style: solid;
     border-radius: 8px;
     border-width: 8px;
-    box-shadow: 0 0 10px whitesmoke;
 }
 .dice-dot{
     --top: 0%;
@@ -152,7 +151,7 @@ body {
 
     width: 16 px;
     height: 16px;
-    background-color: whitesmoke;
+    background-color:#333333;
     border-radius: 50%;
     /* dot positioning */
     position: absolute;
@@ -163,4 +162,5 @@ body {
 .btn-roll-dice{
     width: 48px;
     margin: 8px;
+    align-items: center;
 }
