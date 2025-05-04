@@ -137,7 +137,7 @@ body {
     width: 100vw;
     height: fit-content;
 }
-.dice6{
+.d6{
     width: 64px;
     height: 64px;
     position: relative;
@@ -148,29 +148,58 @@ body {
     border-radius: 8px;
     border-width: 8px;
 }
-.dice20{
+.d20-face{
+    display: flex;
+    justify-content: center;
     width: 0px;
     height: 0px;
-    border-left: 25px solid transparent;
-	border-right: 25px solid transparent;
-	border-bottom: 50px solid whitesmoke;
+    border-left: 32px solid transparent;
+	border-right: 32px solid transparent;
+	border-bottom: 64px solid whitesmoke;
 }
-.dice-dot{
-    width: 16px;
-    height: 16px;
-    background-color:#333333;
-    border-radius: 50%;
-    /* dot positioning */
+.hexagon {
+    display: flex;
+    width: 96px;
+    height: 64px;
+    background: #717171;
+    
+  }
+.numbers{
+    width: 64px;
+    line-height: 64px;
+    font-size: 100%;
+    font-weight: bold;
+    color: #333333;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
 }
 .btn-roll-dice{
     width: 48px;
     margin: 8px;
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+  /*trying to figure out how these next two were working to make the hexagon shape, but not in use */
+.hexagon-before {
+    content: "";
+    position: absolute;
+    top: -28.8675px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 28.8675px solid red;
+}
+.hexagon-after {
+    content: "";
+    position: absolute;
+    bottom: -28.8px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 28.8675px solid red;
 }
