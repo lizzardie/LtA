@@ -137,7 +137,7 @@ body {
     width: 100vw;
     height: fit-content;
 }
-.dice{
+.dice6{
     width: 64px;
     height: 64px;
     position: relative;
@@ -147,6 +147,13 @@ body {
     border-style: solid;
     border-radius: 8px;
     border-width: 8px;
+}
+.dice20{
+    width: 0px;
+    height: 0px;
+    border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid whitesmoke;
 }
 .dice-dot{
     width: 16px;
