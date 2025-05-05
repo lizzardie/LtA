@@ -113,10 +113,10 @@ p {
     border-width: 8px;
     padding: 8px;
 }
-body {
+body{
     background-color: #333333;
 }
-.NPC-gallery {
+.NPC-gallery{
     display: grid;
     grid-auto-flow: row dense;
     gap: 24px;
@@ -135,7 +135,7 @@ body {
 .dice-container{
     display: grid;
     width: 100vw;
-    height: fit-content;
+    height: 106px;
     grid-template-columns: auto auto auto auto auto auto;
     grid-template-rows: auto;
     justify-content: space-evenly;
@@ -158,20 +158,45 @@ body {
 }
 .d20-face{
     display: flex;
+    position: relative;
     justify-content: center;
+    top: 32px;
     width: 0px;
     height: 0px;
     border-left: 32px solid transparent;
 	border-right: 32px solid transparent;
 	border-bottom: 64px solid whitesmoke;
+    translate: -32px;
 }
-.hexagon {
+.d20-rect{
     display: flex;
     width: 96px;
     height: 64px;
     background: #717171;
-    
+    position: relative;
   }
+.d20-toptri{
+    position: relative;
+    top: -32px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 48px solid transparent;
+    border-right: 48px solid transparent;
+    border-bottom: 32px solid red;
+}
+.d20-bottri{
+    position: relative;
+    top: 32px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 48px solid transparent;
+    border-right: 48px solid transparent;
+    border-bottom: 32px solid red;
+    transform: rotate(180deg);
+    translate: -48px;
+}
 .numbers{
     width: 64px;
     line-height: 64px;
