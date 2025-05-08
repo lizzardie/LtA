@@ -107,6 +107,7 @@ p {
     display: grid;
     grid-template-columns: 136px auto;
     background-size: cover;
+    background-image: radial-gradient(circle at 1px 1px, whitesmoke 1px, transparent 0);
     background-color:#333333;
     border: whitesmoke;
     border-style: solid;
