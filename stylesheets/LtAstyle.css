@@ -16,6 +16,10 @@ p {
     font-family: courier;
     font-size: 150%;
 }
+textarea{
+    resize: none;
+    border: whitesmoke;
+}
 .top-section{
     background-color: #333333;
     display: grid;
@@ -59,7 +63,9 @@ p {
 .drag-box{
     width: 136px;
     height: 168px;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     border: black;
     border-style: solid;
     border-width: 4px;
