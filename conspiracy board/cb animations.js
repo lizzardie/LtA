@@ -1,7 +1,6 @@
 import {animate, utils, createDraggable} from 'anime.esm.js';
 
-createDraggable({
-    targets: ".drag-box",
+createDraggable(".drag-box", {
     container: ".entire-board",
     x: { snap: 32 },            
     y: { snap: 32 },              
