@@ -141,15 +141,29 @@ body{
 .dice-container{
     display: grid;
     width: 100vw;
-    height: 106px;
+    height: 200px;
     grid-template-columns: auto auto auto auto auto auto;
     grid-template-rows: auto;
     justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
 }
 .button-holder{
     display: grid;
     width: 100vw;
     height: fit-content;
+}
+.d-notusingrn{
+    position: relative;
+    top: 32px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-radius: 8px;
+    border-left: 32px solid transparent;
+    border-right: 32px solid transparent;
+    border-bottom: 64px solid whitesmoke;
 }
 .d6{
     width: 64px;
@@ -209,7 +223,7 @@ body{
     font-size: 100%;
     font-weight: bold;
     color: #333333;
-    position: absolute;
+    position: relative;
 }
 .btn-roll-dice{
     width: 48px;
@@ -219,30 +233,17 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-  /*trying to figure out how these next two were working to make the hexagon shape, but not currently in use just studying
-  i would like to understand and be able to actually draw with code but maybe for the scope of this class
-  (since we already learned that in p5js) we just draw the shapes and use those uploaded images as bg? and then
-  do the number randomizing on top of a static img (or could even draw multiple frames and make an animation--
-  --ok this is just getting away from myself now here lol) */
-.hexagon-before {
-    content: "";
-    position: absolute;
-    top: -28.8675px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 28.8675px solid red;
-}
-.hexagon-after {
-    content: "";
-    position: absolute;
-    bottom: -28.8px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 28.8675px solid red;
-}
+.d4{
+    --r:8px; /* border radius */
+    width: 96px;
+    aspect-ratio: 1/cos(30deg);
+    --_g:calc(tan(60deg)*var(--r)) bottom var(--r),#000 98%,#0000 101%;
+    -webkit-mask:
+      conic-gradient(from -30deg at 50% calc(200% - 3*var(--r)/2),#000 60deg,#0000 0)
+       0 100%/100% calc(100% - 3*var(--r)/2) no-repeat,
+      radial-gradient(var(--r) at 50% calc(2*var(--r)),#000 98%,#0000 101%),
+      radial-gradient(var(--r) at left  var(--_g)),
+      radial-gradient(var(--r) at right var(--_g));
+    clip-path: polygon(50% 0,100% 100%,0 100%);
+    background: whitesmoke;
+  }
