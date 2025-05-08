@@ -1,9 +1,9 @@
-src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"
-import {animate, draggable} from 'animejs';
+import {animate, draggable} from 'anime.esm.js';
 const { animate } = anime;
 const draggable = createDraggable();
 
-anime.createDraggable(".drag-box", {
+createDraggable({
+    targets: ".drag-box",
     container: ".entire-board",
 });
 
