@@ -142,7 +142,7 @@ body{
     display: grid;
     width: 100vw;
     height: 200px;
-    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     justify-content: space-evenly;
     justify-items: center;
@@ -153,72 +153,10 @@ body{
     width: 100vw;
     height: fit-content;
 }
-.d-notusingrn{
-    position: relative;
-    top: 32px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-radius: 8px;
-    border-left: 32px solid transparent;
-    border-right: 32px solid transparent;
-    border-bottom: 64px solid whitesmoke;
-}
-.d6{
-    width: 64px;
-    height: 64px;
-    position: relative;
-    margin: 8px;
-    background-color: whitesmoke;
-    border: whitesmoke;
-    border-style: solid;
-    border-radius: 8px;
-    border-width: 8px;
-}
-.d20-face{
+.numbers{ /* can't figure out why it's not centered on the d6*/
     display: flex;
-    position: relative;
+    align-items: center;
     justify-content: center;
-    top: 32px;
-    width: 0px;
-    height: 0px;
-    border-left: 32px solid transparent;
-	border-right: 32px solid transparent;
-	border-bottom: 64px solid whitesmoke;
-    translate: -32px;
-}
-.d20-rect{
-    display: flex;
-    width: 96px;
-    height: 64px;
-    background: #717171;
-    position: relative;
-  }
-.d20-toptri{
-    position: relative;
-    top: -32px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 48px solid transparent;
-    border-right: 48px solid transparent;
-    border-bottom: 32px solid red;
-}
-.d20-bottri{
-    position: relative;
-    top: 32px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 48px solid transparent;
-    border-right: 48px solid transparent;
-    border-bottom: 32px solid red;
-    transform: rotate(180deg);
-    translate: -48px;
-}
-.numbers{
-    width: 64px;
     line-height: 64px;
     font-size: 100%;
     font-weight: bold;
@@ -234,27 +172,53 @@ body{
     transform: translate(-50%, -50%);
 }
 .d4{
-    /*need to learn from this example code how to use variables and math to generate more dice shapes */
-    --r:8px; /* border radius */
-    width: 96px;
-    aspect-ratio: 1/cos(30deg);
-    --_g:calc(tan(60deg)*var(--r)) bottom var(--r),#000 98%,#0000 101%;
-    -webkit-mask:
-      conic-gradient(from -30deg at 50% calc(200% - 3*var(--r)/2),#000 60deg,#0000 0)
-       0 100%/100% calc(100% - 3*var(--r)/2) no-repeat,
-      radial-gradient(var(--r) at 50% calc(2*var(--r)),#000 98%,#0000 101%),
-      radial-gradient(var(--r) at left  var(--_g)),
-      radial-gradient(var(--r) at right var(--_g));
+    position: relative;
+    width: 64px;
+    height: 64px;
     clip-path: polygon(50% 0,100% 100%,0 100%);
     background: whitesmoke;
   }
+.d6{
+    position: relative;
+    width: 64px;
+    height: 64px;
+    background: whitesmoke;
+}
+.d8-face{
+    position: relative;
+    bottom: 8px;
+    width: 96px;
+    height: 96px;
+    clip-path: polygon(50% 0%,98% 77%,2% 77%);
+    background: whitesmoke;
+}
+.d8-body{
+    width: 96px; /* adjust to control the size */
+    aspect-ratio: 1;
+    clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+    background:#717171;
+}
+.d10-face{
+    position: relative;
+    bottom: 12px;
+    width: 96px;
+    aspect-ratio: 1;
+    clip-path: polygon(50% 0%, 85% 70%, 50% 90%, 15% 70%);
+    background: whitesmoke
+}
+.d10-body{
+    width: 96px; /* adjust to control the size */
+    aspect-ratio: 1;
+    clip-path: polygon(50% 0%,100% 35%,100% 65%,50% 100%,0% 65%,0% 35%);
+    background:#717171;
+}
 .d12-face{
     position: relative;
     left: 16px;
     width: 64px; /* adjust to control the size */
     aspect-ratio: 1;
     clip-path: polygon(79.39% 90.45%,20.61% 90.45%,2.45% 34.55%,50% 0%,97.55% 34.55%);
-    background-color: whitesmoke;
+    background: whitesmoke;
 }
 .d12-body{
     width: 96px; /* adjust to control the size */
@@ -262,5 +226,22 @@ body{
     clip-path: polygon(97.25% 66.34%,78.62% 91%,49.06% 99.99%,19.85% 89.89%,2.16% 64.55%,2.75% 33.66%,21.38% 9%,50.94% 0.01%,80.15% 10.11%,97.84% 35.45%);
     background: #717171;
 }
+.d20-face{
+    position: relative;
+    left: 24px;
+    top: 8px;
+    width: 48px;
+    height: 48px;
+    clip-path: polygon(50% 0,100% 100%,0 100%);
+    background: whitesmoke;
+}
+.d20-body {
+    width: 96px; /* adjust to control the size */
+    aspect-ratio: 1;
+    clip-path: polygon(92.77% 75.9%,48.95% 99.99%,6.18% 74.09%,7.23% 24.1%,51.05% 0.01%,93.82% 25.91%);
+    background: #717171;;
+}
 
-/* what i'm using for the shapes: https://css-generators.com/polygon-shape/   */
+/* what i'm using for the shapes:
+https://verpex.com/blog/website-tips/css-shapes-the-triangle    <-- now i know how to make any polygon by hand!
+https://css-generators.com/polygon-shape/   */
