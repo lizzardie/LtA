@@ -234,6 +234,7 @@ body{
     transform: translate(-50%, -50%);
 }
 .d4{
+    /*need to learn from this example code how to use variables and math to generate more dice shapes */
     --r:8px; /* border radius */
     width: 96px;
     aspect-ratio: 1/cos(30deg);
