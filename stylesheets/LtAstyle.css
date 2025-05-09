@@ -248,3 +248,19 @@ body{
     clip-path: polygon(50% 0,100% 100%,0 100%);
     background: whitesmoke;
   }
+.d12-face{
+    position: relative;
+    left: 16px;
+    width: 64px; /* adjust to control the size */
+    aspect-ratio: 1;
+    clip-path: polygon(79.39% 90.45%,20.61% 90.45%,2.45% 34.55%,50% 0%,97.55% 34.55%);
+    background-color: whitesmoke;
+}
+.d12-body{
+    width: 96px; /* adjust to control the size */
+    aspect-ratio: 1;
+    clip-path: polygon(97.25% 66.34%,78.62% 91%,49.06% 99.99%,19.85% 89.89%,2.16% 64.55%,2.75% 33.66%,21.38% 9%,50.94% 0.01%,80.15% 10.11%,97.84% 35.45%);
+    background: #717171;
+}
+
+/* what i'm using for the shapes: https://css-generators.com/polygon-shape/   */
