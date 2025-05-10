@@ -17,7 +17,7 @@ p {
     font-size: 150%;
 }
 textarea{
-    resize: none;
+    resize: both;
     border: whitesmoke;
 }
 .top-section{
