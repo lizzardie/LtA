@@ -51,7 +51,7 @@ textarea{
 }
 .art-box {
     width: fit-content;
-    height: 400px;
+    height: 600px;
     overflow-y: auto;
     background-color:#333;
     border: whitesmoke;
@@ -99,8 +99,7 @@ textarea{
 .grid-container{
     width: 90%;
     height: auto;
-    display: grid;
-
+    display: flex;
     background-color:#333333;
     background-image: linear-gradient(whitesmoke 1px, transparent 0);
     border: whitesmoke;
