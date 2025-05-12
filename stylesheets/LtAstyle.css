@@ -62,7 +62,6 @@ textarea{
     float: left;
 }
 .drag-box{
-    position: absolute;
     width: 136px;
     height: 168px;
     display: grid;
