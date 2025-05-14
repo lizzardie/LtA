@@ -24,11 +24,40 @@ function rollDice(){
 
 
 
-/*button.addEventListener("click", function(){
-     let targ = document.querySelector(".target");
-     let newItem = document.createElement("div");
+function d20Spawn(){
+    let newd20 = document.createElement("div");
+    document.getElementById("dice-container-id").appendChild(newd20);
+    newd20.classList.add("d20-body");
+    newd20.classList.add("d20-face");
+    newd20.classList.add("numbers");
+}
+
+
+
+/* USE THESE TWO IF THE ABOVE ONE ISN'T WORKING
+function d20BodySpawn(){
+    this.div = document.createElement("div");
+    document.getElementById("dice-container-id").appendChild(this.div);
+    this.div.className = "d20-body";
+}
+
+function d20FaceSpawn(){
+    this.div = document.createElement("div");
+    document.getElementById("dice-container-id").appendChild(this.div);
+    this.div.className = "d20-face";
+}
+*/
+
+/*
+button.addEventListener("click", function(){
+     let targ = document.querySelector(".target");     <-- is ".target" the button name?
+     let newItem = document.createElement("div");      <-- naming and createElementing a new div i understand
      newItem.classList.add(".d20");
      targ.appendChild(newItem);
 }); 
-this is code from prof abram abt the add new dice javascript, gonna try to learn how to do it from a site first too
-so that i actually understand why its working */
+this is code from prof abram abt the add new dice javascript, 
+gonna try to learn how to do it from this & a site
+so that i actually understand why its working :)
+    Update: it Does work, but the problem now is it doesn't stack the parts of one die
+    together in the heirarchical way that it happens in 
+*/
