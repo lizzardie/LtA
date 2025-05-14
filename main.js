@@ -21,3 +21,12 @@ function rollDice(){
     document.querySelector(".d20-body .numbers").textContent = d20Total;
 }
 /* how to assign these vars now to the divs,, */
+
+
+
+button.addEventListener("click", function(){
+     let targ = document.querySelector(".target");
+     let newItem = document.createElement("div");
+     newItem.classList.add(".d20");
+     targ.appendChild(newItem);
+});

@@ -77,13 +77,13 @@ textarea{
 .art-mini{
     width: 128px;
     height: 128px;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     border: black;
     border-style: solid;
     border-width: 4px;
-    margin: 4px;
+    margin: auto;
 }
 .button {
     font: bold 100% courier;
@@ -149,7 +149,9 @@ body{
     align-items: center;
 }
 .button-holder{
-    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100vw;
     height: fit-content;
 }
@@ -163,13 +165,10 @@ body{
     color: #333333;
     position: relative;
 }
-.btn-roll-dice{
+.btn-dice{
     width: 48px;
     margin: 8px;
     position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 .d4{
     position: relative;
