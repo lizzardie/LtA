@@ -24,9 +24,11 @@ function rollDice(){
 
 
 
-button.addEventListener("click", function(){
+/*button.addEventListener("click", function(){
      let targ = document.querySelector(".target");
      let newItem = document.createElement("div");
      newItem.classList.add(".d20");
      targ.appendChild(newItem);
-});
+}); 
+this is code from prof abram abt the add new dice javascript, gonna try to learn how to do it from a site first too
+so that i actually understand why its working */
