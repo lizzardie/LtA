@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-  $(".drag-box").draggable();
+  $(".dragBox").draggable();
 });
 
 
