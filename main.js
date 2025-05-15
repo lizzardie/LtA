@@ -26,6 +26,24 @@ function rollDice(){
 
 function d20Spawn(){
     d20BodyDiv = document.createElement("div");
+    d20BodyDiv.className = "d20-body";
+
+    d20FaceDiv = document.createElement("div");
+    d20FaceDiv.className = "d20-face";
+
+    d20Number = document.createTextNode("20");
+    d20Number.className = "numbers";    /* this class name isn't actually getting applied i dont think */
+
+    document.getElementById("dice-container-id").append(d20Number, d20FaceDiv, d20BodyDiv);
+}
+
+
+
+/*
+    attempts that didn't work:
+    1.
+function d20Spawn(){
+    d20BodyDiv = document.createElement("div");
     document.getElementById("dice-container-id").appendChild(d20BodyDiv);
     d20BodyDiv.className = "d20-body";
 
@@ -36,11 +54,9 @@ function d20Spawn(){
     d20Number = document.createElement("p").textcontent;
     document.getElementById("dice-container-id").appendChild(d20Number);
     d20Number.className = "numbers";
-    
 }
 
-
-/* attempt that didn't work
+    2.
 function d20Spawn(){
     function d20BodySpawn(){
         let newd20Body = document.createElement("div");
@@ -56,8 +72,8 @@ function d20Spawn(){
 */
 
 /*
-button.addEventListener("click", function(){
-     let targ = document.querySelector(".target");     <-- is ".target" the button name?
+button.addEventListener("click", function d20Spawn(){
+     let targ = document.querySelector(".dice-container");     <-- is ".target" the parent div location?
      let newItem = document.createElement("div");      <-- naming and createElementing a new div i understand
      newItem.classList.add(".d20");
      targ.appendChild(newItem);
