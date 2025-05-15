@@ -25,26 +25,38 @@ function rollDice(){
 
 
 function d20Spawn(){
-    let newd20 = document.createElement("div");
-    document.getElementById("dice-container-id").appendChild(newd20);
-    newd20.classList.add("d20-body");
-    newd20.classList.add("d20-face");
-    newd20.classList.add("numbers");
+    d20BodyDiv = document.createElement("div");
+    document.getElementById("dice-container-id").appendChild(d20BodyDiv);
+    d20BodyDiv.className = "d20-body";
+
+    d20FaceDiv = document.createElement("div");
+    document.getElementById("dice-container-id").appendChild(d20FaceDiv);
+    d20FaceDiv.className = "d20-face";
+
+    d20Number = document.createElement("p").textcontent;
+    document.getElementById("dice-container-id").appendChild(d20Number);
+    d20Number.className = "numbers";
+    
 }
 
 
 
-/* USE THESE TWO IF THE ABOVE ONE ISN'T WORKING
-function d20BodySpawn(){
-    this.div = document.createElement("div");
-    document.getElementById("dice-container-id").appendChild(this.div);
-    this.div.className = "d20-body";
-}
 
-function d20FaceSpawn(){
-    this.div = document.createElement("div");
-    document.getElementById("dice-container-id").appendChild(this.div);
-    this.div.className = "d20-face";
+
+
+
+/* attempt that didn't work
+function d20Spawn(){
+    function d20BodySpawn(){
+        let newd20Body = document.createElement("div");
+        document.getElementById("dice-container-id").appendChild(newd20Body);
+        newd20Body.classList.add("d20-body");
+    }
+    function d20FaceSpawn(){
+        let newd20Face = document.createElement("div");
+        document.getElementById("dice-container-id").appendChild(newd20Face);
+        newd20Face.classList.add("d20-face");
+    }
 }
 */
 
