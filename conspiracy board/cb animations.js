@@ -1,4 +1,11 @@
-import {animate, utils, createDraggable} from 'anime.esm.js';
+
+$(document).ready(function() {
+  $(".drag-box").draggable();
+});
+
+
+/* animejs stuff
+import {createDraggable} from 'anime.esm.js';
 
 createDraggable(".drag-box", {
     container: ".entire-board",
@@ -10,7 +17,4 @@ createDraggable(".drag-box", {
     onDrag: () => {},
     onRelease: () => {},
 });
-
-$(document).ready(function() {
-  $(".drag-box").draggable();
-});
+*/
