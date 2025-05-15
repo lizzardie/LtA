@@ -40,11 +40,6 @@ function d20Spawn(){
 }
 
 
-
-
-
-
-
 /* attempt that didn't work
 function d20Spawn(){
     function d20BodySpawn(){
