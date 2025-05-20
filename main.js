@@ -52,7 +52,22 @@ function rollDice(){
 
 /* how to assign these vars now to the divs,, */
 
+function d12Spawn(){
 
+    d12BodyDiv = document.createElement("div");
+    d12BodyDiv.className = "d12-body";
+
+    d12FaceDiv = document.createElement("div");
+    d12FaceDiv.className = "d12-face";
+
+    d12Number = document.createElement("p");
+    d12Number.textContent = "12";
+    d12Number.className = "numbers";
+
+    document.getElementById("dice-container-id").append(d12BodyDiv);
+    d12FaceDiv.append(d12Number);
+    d12BodyDiv.append(d12FaceDiv);
+}
 
 function d20Spawn(){
 
