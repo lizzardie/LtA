@@ -5,12 +5,10 @@ var d10Total = 0;
 var d12Total = 0;
 var d20Total = 0;
 
-
-
-
+/*
 const allDice = document.querySelectorAll(".dice-container");
 const d20ToRoll = allDice.querySelectorAll(".d20-body .numbers");
-
+*/
 
 function rollDice(){
     /* note to future self for when i forget: random with just * 4 would return a number between 0 and 3, so the plus 1 bumps it up from 0 to 1  */
@@ -29,24 +27,24 @@ function rollDice(){
     document.querySelector(".d10-body .numbers").textContent = d10Total;
     document.querySelector(".d12-body .numbers").textContent = d12Total;
     
-
+    document.querySelectorAll(".d20-body .numbers").textContent = d20Total;
     
-    document.querySelectorAll(d20ToRoll).textContent = d20Total;
      
     };
 
-
+/*
     document.querySelector(".d20-body .numbers").textContent = d20Total;
 
 
-        /* add the rest of the dice in same format to this const if this method works*/
+add the rest of the dice in same format to this const if this method works
+
     const d12ToRoll = allDice.querySelectorAll("div.d12-body > p");
 
     d20ToRoll.array.forEach((d20ToRoll) => {
         document.querySelectorAll(d20ToRoll).textContent = d20Total;
     });
 
-    /* use querySelectorAll to be able to roll multiple of the same die at once
+     use querySelectorAll to be able to roll multiple of the same die at once
     and to maybe make the above stuff more efficient by not having to write one
     for every kind of die and just letting it find which one through its parent class */ 
 
@@ -84,43 +82,10 @@ function d20Spawn(){
     document.getElementById("dice-container-id").append(d20BodyDiv);
     d20FaceDiv.append(d20Number);
     d20BodyDiv.append(d20FaceDiv);
-
-    d20BodyDiv.onClick = rollDice;  /* idk if i need this but we'll see */
 }
 
 
 
-/*
-    attempts that didn't work:
-    1.
-function d20Spawn(){
-    d20BodyDiv = document.createElement("div");
-    document.getElementById("dice-container-id").appendChild(d20BodyDiv);
-    d20BodyDiv.className = "d20-body";
-
-    d20FaceDiv = document.createElement("div");
-    document.getElementById("dice-container-id").appendChild(d20FaceDiv);
-    d20FaceDiv.className = "d20-face";
-
-    d20Number = document.createElement("p").textcontent;
-    document.getElementById("dice-container-id").appendChild(d20Number);
-    d20Number.className = "numbers";
-}
-
-    2.
-function d20Spawn(){
-    function d20BodySpawn(){
-        let newd20Body = document.createElement("div");
-        document.getElementById("dice-container-id").appendChild(newd20Body);
-        newd20Body.classList.add("d20-body");
-    }
-    function d20FaceSpawn(){
-        let newd20Face = document.createElement("div");
-        document.getElementById("dice-container-id").appendChild(newd20Face);
-        newd20Face.classList.add("d20-face");
-    }
-}
-*/
 
 /*
 button.addEventListener("click", function d20Spawn(){
