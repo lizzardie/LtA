@@ -9,7 +9,7 @@ var d20Total = 0;
 
 
 const allDice = document.querySelectorAll(".dice-container");
-const d20ToRoll = allDice.querySelectorAll(".d20-body > p");
+const d20ToRoll = allDice.querySelectorAll(".d20-body .numbers");
 
 
 function rollDice(){
