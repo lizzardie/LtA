@@ -6,12 +6,14 @@ var d12Total = 0;
 var d20Total = 0;
 
 
-const allDice = document.querySelector(".dice-container");
-const diceToRoll = allDice.querySelectorAll(".d20-body, .d12-body, .d10-body, .d8-body, .d6-body, .d4-body");
-const numberChange = diceToRoll.querySelectorAll(".numbers");
+var allDice = document.querySelector(".dice-container");
+var numberChange = allDice.querySelectorAll(".numbers");
+
 
 
 function rollDice(){
+
+    var diceToRoll = allDice.querySelectorAll(".d20-body, .d12-body, .d10-body, .d8-body, .d6, .d4");
     /* note to future self for when i forget: random with just * 4 would return a number between 0 and 3, so the plus 1 bumps it up from 0 to 1  */
 
     d4Total = Math.floor(Math.random() * 4 + 1);
@@ -27,15 +29,41 @@ function rollDice(){
     document.querySelector(".d10-body .numbers").textContent = d10Total;
     document.querySelector(".d12-body .numbers").textContent = d12Total;
     
-    for (let i = 0; i < numberChange.length; i++){
-        document.querySelector(numberChange[i]).textContent = d20Total;  /* ik this is wrong anyways cuz it would be turning all the numbers into d20s but why wont the rollDice function read for loops or for each functions????? */
-    }
-    
+    diceToRoll.forEach((dieToRoll) => {
+        if (dieToRoll.className.includes("d20-body")) {
+                d20Total = Math.floor(Math.random() * 20 + 1);
+                dieToRoll.querySelector(".d20Numbers").textContent = d20Total;
+        }
+
+
+    })
     
 };
 
 
 /*
+
+numberChange.forEach((diceToRoll) => {
+        if(diceToRoll.className == "d20-body"){
+            diceToRoll.textContent = d20Total;
+        }
+    })
+
+(diceToRoll < ".d20-body").textContent = d20Total;
+
+
+var d20ToRoll = allDice.querySelectorAll(".d20-body .numbers");
+
+for (let i = 0; i < d20ToRoll.length; i++){
+        d20ToRoll[i].textContent = d20Total;
+    }
+
+
+
+for (let i = 0; i < numberChange.length; i++){
+        numberChange[i].textContent = d20Total;   ik this is wrong anyways cuz it would be turning all the numbers into d20s but why wont the rollDice function read for loops or for each functions????? 
+    }
+
 numberChange.array.forEach((diceToRoll) => {
         document.querySelectorAll(".d20-body .numbers").textContent = d20Total;
     })
@@ -75,7 +103,7 @@ function d20Spawn(){
 
     d20Number = document.createElement("p");
     d20Number.textContent = "20";
-    d20Number.className = "numbers";    /* this class name isn't actually getting applied i dont think */
+    d20Number.className = "numbers d20Numbers";  
 
     document.getElementById("dice-container-id").append(d20BodyDiv);
     d20FaceDiv.append(d20Number);
