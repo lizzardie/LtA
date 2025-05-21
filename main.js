@@ -27,16 +27,18 @@ function rollDice(){
     document.querySelector(".d10-body .numbers").textContent = d10Total;
     document.querySelector(".d12-body .numbers").textContent = d12Total;
     
-
-    numberChange.array.forEach((diceToRoll) => {
-        document.querySelectorAll(".d20-body .numbers").textContent = d20Total;
-    })
+    for (let i = 0; i < numberChange.length; i++){
+        document.querySelector(numberChange[i]).textContent = d20Total;  /* ik this is wrong anyways cuz it would be turning all the numbers into d20s but why wont the rollDice function read for loops or for each functions????? */
+    }
+    
     
 };
 
 
 /*
-
+numberChange.array.forEach((diceToRoll) => {
+        document.querySelectorAll(".d20-body .numbers").textContent = d20Total;
+    })
 
 add the rest of the dice in same format to this const if this method works
 
