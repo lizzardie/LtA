@@ -7,7 +7,7 @@ var d20Total = 0;
 
 
 var allDice = document.querySelector(".dice-container");
-var numberChange = allDice.querySelectorAll(".numbers");
+var numberChange = allDice.querySelectorAll(".numbers"); /* i can get rid of this line p sure, check when im on wifi */
 
 
 
@@ -31,8 +31,12 @@ function rollDice(){
     
     diceToRoll.forEach((dieToRoll) => {
         if (dieToRoll.className.includes("d20-body")) {
-                d20Total = Math.floor(Math.random() * 20 + 1);
-                dieToRoll.querySelector(".d20Numbers").textContent = d20Total;
+            d20Total = Math.floor(Math.random() * 20 + 1);
+            dieToRoll.querySelector(".d20Numbers").textContent = d20Total;
+        }
+        if (dieToRoll.className.includes("d12-body")){
+            d12Total = Math.floor(Math.random() * 12 + 1);
+            dieToRoll.querySelector(".d12Numbers").textContent = d12Total;
         }
 
 
@@ -76,8 +80,63 @@ add the rest of the dice in same format to this const if this method works
 
 /* how to assign these vars now to the divs,, */
 
-function d12Spawn(){
+function d4Spawn(){
+    d4Div = document.createElement("div");
+    d4Div.className = "d4";
 
+    d4Number = document.createElement("p");
+    d4Number.textContent = "4";
+    d4Number.className = "numbers d4Numbers";
+
+    document.getElementById("dice-container-id").append(d4Div);
+    d4Div.append(d4Number);
+}
+
+function d6Spawn(){
+    d6Div = document.createElement("div");
+    d6Div.className = "d6";
+
+    d6Number = document.createElement("p");
+    d6Number.textContent = "6";
+    d6Number.className = "numbers d6Numbers"
+
+    document.getElementById("dice-container-id").append(d6Div);
+    d6Div.append(d6Number);
+}
+
+function d8Spawn(){
+    d8BodyDiv = document.createElement("div");
+    d8BodyDiv.className = "d8-body";
+
+    d8FaceDiv = document.createElement("div");
+    d8FaceDiv.className = "d8-face";
+
+    d8Number = document.createElement("p");
+    d8Number.textContent = "8";
+    d8Number.className = "numbers d8Numbers";
+
+    document.getElementById("dice-container-id").append(d8BodyDiv);
+    d8FaceDiv.append(d8Number);
+    d8BodyDiv.append(d8FaceDiv);
+}
+
+function d10Spawn(){
+    d10BodyDiv = document.createElement("div");
+    d10BodyDiv.className = "d10-body";
+
+    d10FaceDiv = document.createElement("div");
+    d10FaceDiv.className = "d10-face";
+
+    d10Number = document.createElement("p");
+    d10Number.textContent = "10";
+    d10Number.className = "numbers d10Numbers";
+
+    document.getElementById("dice-container-id").append(d10BodyDiv);
+    d10FaceDiv.append(d10Number);
+    d10BodyDiv.append(d10FaceDiv);
+}
+
+function d12Spawn(){
     d12BodyDiv = document.createElement("div");
     d12BodyDiv.className = "d12-body";
 
@@ -86,7 +145,7 @@ function d12Spawn(){
 
     d12Number = document.createElement("p");
     d12Number.textContent = "12";
-    d12Number.className = "numbers";
+    d12Number.className = "numbers d12Numbers";
 
     document.getElementById("dice-container-id").append(d12BodyDiv);
     d12FaceDiv.append(d12Number);
@@ -94,7 +153,6 @@ function d12Spawn(){
 }
 
 function d20Spawn(){
-
     d20BodyDiv = document.createElement("div");
     d20BodyDiv.className = "d20-body";
 
@@ -109,9 +167,6 @@ function d20Spawn(){
     d20FaceDiv.append(d20Number);
     d20BodyDiv.append(d20FaceDiv);
 }
-
-
-
 
 /*
 button.addEventListener("click", function d20Spawn(){
