@@ -5,13 +5,15 @@ var d10Total = 0;
 var d12Total = 0;
 var d20Total = 0;
 
-/*
-const allDice = document.querySelectorAll(".dice-container");
-const d20ToRoll = allDice.querySelectorAll(".d20-body .numbers");
-*/
+
+const allDice = document.querySelector(".dice-container");
+const diceToRoll = allDice.querySelectorAll(".d20-body, .d12-body, .d10-body, .d8-body, .d6-body, .d4-body");
+const numberChange = diceToRoll.querySelectorAll(".numbers");
+
 
 function rollDice(){
     /* note to future self for when i forget: random with just * 4 would return a number between 0 and 3, so the plus 1 bumps it up from 0 to 1  */
+
     d4Total = Math.floor(Math.random() * 4 + 1);
     d6Total = Math.floor(Math.random() * 6 + 1);
     d8Total = Math.floor(Math.random() * 8 + 1);
@@ -19,30 +21,24 @@ function rollDice(){
     d12Total = Math.floor(Math.random() * 12 + 1);
     d20Total = Math.floor(Math.random() * 20 + 1);
     
-    
-    
     document.querySelector(".d4 .numbers").textContent = d4Total;
     document.querySelector(".d6 .numbers").textContent = d6Total; /* the space before .numbers is necessary! */
     document.querySelector(".d8-body .numbers").textContent = d8Total;
     document.querySelector(".d10-body .numbers").textContent = d10Total;
     document.querySelector(".d12-body .numbers").textContent = d12Total;
     
-    document.querySelectorAll(".d20-body .numbers").textContent = d20Total;
+
+    numberChange.array.forEach((diceToRoll) => {
+        document.querySelectorAll(".d20-body .numbers").textContent = d20Total;
+    })
     
-     
-    };
+};
+
 
 /*
-    document.querySelector(".d20-body .numbers").textContent = d20Total;
 
 
 add the rest of the dice in same format to this const if this method works
-
-    const d12ToRoll = allDice.querySelectorAll("div.d12-body > p");
-
-    d20ToRoll.array.forEach((d20ToRoll) => {
-        document.querySelectorAll(d20ToRoll).textContent = d20Total;
-    });
 
      use querySelectorAll to be able to roll multiple of the same die at once
     and to maybe make the above stuff more efficient by not having to write one
