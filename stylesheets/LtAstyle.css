@@ -78,7 +78,28 @@ textarea{
     margin: 8px;
     padding: 4px;
 }
-#drag-box{
+#drag-box1{
+    position: fixed;
+}
+#drag-box2{
+    position: fixed;
+}
+#drag-box3{
+    position: fixed;
+}
+#drag-box4{
+    position: fixed;
+}
+#drag-box5{
+    position: fixed;
+}
+#drag-box6{
+    position: fixed;
+}
+#drag-box7{
+    position: fixed;
+}
+#drag-box8{
     position: fixed;
 }
 .art-mini{

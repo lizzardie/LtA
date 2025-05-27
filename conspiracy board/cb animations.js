@@ -1,8 +1,8 @@
 let startX = 0, startY = 0, newX = 0, newY = 0;
 
-var dragbox = document.getElementById('drag-box');
+var dragbox1 = document.getElementById('drag-box1');
 
-dragbox.addEventListener('mousedown', mouseDown);
+dragbox1.addEventListener('mousedown', mouseDown);
 
 function mouseDown(e){
   startX = e.clientX;
@@ -19,8 +19,8 @@ function mouseMove(e){
   startX = e.clientX;
   startY = e.clientY;
 
-  dragbox.style.top = startY + 'px';
-  dragbox.style.left = startX + 'px';
+  dragbox1.style.top = startY + 'px';
+  dragbox1.style.left = startX + 'px';
 
   console.log({newX, newY});
   console.log({startX, startY});
