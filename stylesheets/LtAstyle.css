@@ -53,6 +53,7 @@ textarea{
     border-width: 8px;
 }
 .art-box {
+    display: flex;
     width: fit-content;
     height: 600px;
     overflow-y: auto;
