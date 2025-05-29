@@ -125,14 +125,14 @@ textarea{
     padding: 8px;
     margin: 8px;
     justify-self: end;
-}*/
-
+}
 .note{
     background: whitesmoke;
     width: 136px;
     height: 136px;
     cursor: move;
 }
+*/
 .entire-board{
     display: grid;
     grid-template-columns: 136px auto;
