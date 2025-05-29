@@ -1,9 +1,28 @@
-let wren = document.querySelector("art-mini")
-console.log(wren);
+import {createDraggable} from 'anime.esm.js'
+
+const $dragbox = document.querySelectorAll('.art-mini');
+const $board = document.getElementById('entireboard');
+
+createDraggable($dragbox, {
+    container: $board,             
+    containerPadding: 10,
+    releaseStiffness: 40,
+});
+
+
+
 
 
 
 /*
+var wren = document.getElementById("wrenMove");
+var squares = document.querySelectorAll(".square");
+console.log(wren);
+console.log(squares);
+
+
+
+
 let startX = 0, startY = 0, newX = 0, newY = 0;
 
 var dragbox1 = document.getElementById('drag-box1');
