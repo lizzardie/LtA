@@ -52,7 +52,7 @@ textarea{
     border-style: solid;
     border-width: 8px;
 }
-.art-box {
+/*.art-box {
     display: flex;
     width: fit-content;
     height: 600px;
@@ -113,17 +113,6 @@ textarea{
     border-width: 4px;
     margin: auto;
 }
-.button {
-    font: bold 100% courier;
-    text-decoration: none;
-    background-color: #EEEEEE;
-    color: #333333;
-    padding: 2px 6px 2px 6px;
-    border-top: 1px solid #CCCCCC;
-    border-right: 1px solid #333333;
-    border-bottom: 1px solid #333333;
-    border-left: 1px solid #CCCCCC;
-}
 .grid-container{
     width: 90%;
     height: 600px;
@@ -136,7 +125,16 @@ textarea{
     padding: 8px;
     margin: 8px;
     justify-self: end;
+}*/
+
+.note{
+    background: whitesmoke;
+    width: 200px;
+    height: 200px;
+    cursor: move;
 }
+
+
 .entire-board{
     display: grid;
     grid-template-columns: 136px auto;
@@ -146,6 +144,17 @@ textarea{
     border-style: solid;
     border-width: 8px;
     padding: 8px;
+}
+.button {
+    font: bold 100% courier;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
 }
 .NPC-gallery{
     display: grid;
@@ -272,7 +281,7 @@ https://css-generators.com/polygon-shape/   */
 
 
 .world-maps{
-    width: 100vw;
+    width: 1000px;
     height: fit-content;
     overflow-x: auto;
     display: grid;
