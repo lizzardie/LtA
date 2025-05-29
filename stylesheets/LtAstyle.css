@@ -129,13 +129,14 @@ textarea{
 
 .note{
     background: whitesmoke;
-    width: 200px;
-    height: 200px;
+    width: 136px;
+    height: 136px;
     cursor: move;
 }
 .entire-board{
     display: grid;
     grid-template-columns: 136px auto;
+    grid-template-rows: 136px auto;
     background-size: cover;
     background-color:#333333;
     border: whitesmoke;
