@@ -133,8 +133,6 @@ textarea{
     height: 200px;
     cursor: move;
 }
-
-
 .entire-board{
     display: grid;
     grid-template-columns: 136px auto;

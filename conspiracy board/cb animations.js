@@ -1,3 +1,22 @@
+src="anime.esm.js"
+import {createDraggable, anime} from 'anime.esm.js';
+
+var dragbox = document.querySelector(".note");
+var control = document.getElementById("controlPT");
+
+createDraggable(dragbox,{
+  x: true,
+  y: true,
+  container: ".entire-board",
+  containerPadding: 10,
+  containerFriction: 1,
+  releaseStiffness: 40,
+  releaseEase: "out(3)"
+})
+
+
+
+/*
 let startX = 0, startY = 0, newX = 0, newY = 0;
 
 var dragbox1 = document.getElementById('drag-box1');
@@ -31,7 +50,7 @@ function mouseUp(e){
 
 }
 
-/*
+
 import {createDraggable} from 'anime.esm.js';
 
 const $dragbox = document.querySelectorAll('.drag-box')
