@@ -1,4 +1,5 @@
-
+let wren = document.querySelector("art-mini")
+console.log(wren);
 
 
 
