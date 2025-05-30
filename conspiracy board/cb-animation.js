@@ -1,17 +1,23 @@
+src="anime.iife.js"
+
+anime.createDraggable();
 anime.animate();
 anime.createTimeline();
 anime.createTimer();
 // ...other methods
 
-
 const $dragbox = document.querySelectorAll('.art-mini');
 const $board = document.getElementById('entireboard');
 
-createDraggable($dragbox, {
+anime.createDraggable($dragbox, {
     container: $board,             
     containerPadding: 10,
     releaseStiffness: 40,
 });
+
+
+
+
 
 
 
