@@ -1,3 +1,11 @@
+var wren = document.getElementById("wrenMove");
+var squares = document.querySelectorAll(".square");
+console.log(wren);
+console.log(squares);
+
+
+
+/*
 // it's not working,,, screams and pounds fists ig
 // idk, i'll come back to this tomorrow or smthng
 
@@ -15,24 +23,6 @@ anime.createDraggable($dragbox, {
     containerPadding: 10,
     releaseStiffness: 40,
 });
-
-
-
-
-
-
-
-
-
-
-/*
-var wren = document.getElementById("wrenMove");
-var squares = document.querySelectorAll(".square");
-console.log(wren);
-console.log(squares);
-
-
-
 
 let startX = 0, startY = 0, newX = 0, newY = 0;
 
