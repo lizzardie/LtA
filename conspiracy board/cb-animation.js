@@ -6,14 +6,16 @@ var infoDisplay = document.querySelector("#info");
 wren.addEventListener("drag", dragging);
 wren.addEventListener("dragstart", dragStart);
 
-
+let beingDragged;
 
 function dragging(e){
-  console.log(e.target + "is being dragged");
+  beingDragged = e.target;
+  console.log(beingDragged.id + "is being dragged");
 }
 
 function dragStart(e){
-  console.log("dragging has started on" + e.target);
+  console.log("dragging has started on" + beingDragged.id);
+  infoDisplay.textContent = "You are dragging a " + beingDragged.id;
 }
 
 
