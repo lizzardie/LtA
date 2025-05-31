@@ -1,7 +1,7 @@
 // Note variables and functions
-let color = document.getElementById("color");
-let btnNote = document.getElementById("btnNote");
-let noteHolder = document.getElementById("noteholder");
+var color = document.getElementById("color");
+var btnNote = document.getElementById("btnNote");
+var noteHolder = document.getElementById("noteholder");
 
 btnNote.onclick = () => {
   let newNote = document.createElement("div");
@@ -14,6 +14,9 @@ btnNote.onclick = () => {
 
 document.addEventListener("click", (event) => {
   console.log(event.target);
+  if(event.target.classList.contains("close")){
+    event.target.parentNode.remove();
+  }
 })
 
 

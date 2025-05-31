@@ -168,11 +168,11 @@ form input, button #btnNote{
     all: unset;
     color: whitesmoke;
     font-family: courier;
-    font-size: 150%;
+    font-size: 100%;
 }
 #noteholder .note{
     background-color:#333333;
-    width: max-content;
+    width: 200px;
     height: 200px;
     border-top: 24px solid #e6b905;
     border-radius: 12px;
