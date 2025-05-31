@@ -170,6 +170,7 @@ form input, button #btnNote{
 #noteholder .note{
     background-color:#333333;
     width: max-content;
+    height: 200px;
     border-top: 24px solid #e6b905;
     border-radius: 12px;
     padding: 12px;
