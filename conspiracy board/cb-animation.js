@@ -5,6 +5,9 @@ console.log(squares);
 
 
 
+
+
+
 /*
 // it's not working,,, screams and pounds fists ig
 // idk, i'll come back to this tomorrow or smthng
