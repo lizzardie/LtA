@@ -171,6 +171,16 @@ body #conspiracyboard{
     justify-content: center;
     align-items: center;
 }
+#row3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#row4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .art-mini{
     width: 200px;
     height: 200px;

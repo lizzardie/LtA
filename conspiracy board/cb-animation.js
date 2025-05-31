@@ -1,10 +1,36 @@
-var wren = document.getElementById("wrenMove");
+// Variables and corresponding event listeners
+
+var wren = document.getElementById("wren");
+var candy = document.getElementById("candy");
+var ellisra = document.getElementById("ellisra");
+var joanna = document.getElementById("joanna");
+var pep = document.getElementById("pep");
+var reggie = document.getElementById("reggie");
+var val = document.getElementById("val");
+
 var squares = document.querySelectorAll(".square");
 var infoDisplay = document.querySelector("#info");
 
-
 wren.addEventListener("drag", dragging);
 wren.addEventListener("dragstart", dragStart);
+
+candy.addEventListener("drag", dragging);
+candy.addEventListener("dragstart", dragStart);
+
+ellisra.addEventListener("drag", dragging);
+ellisra.addEventListener("dragstart", dragStart);
+
+joanna.addEventListener("drag", dragging);
+joanna.addEventListener("dragstart", dragStart);
+
+pep.addEventListener("drag", dragging);
+pep.addEventListener("dragstart", dragStart);
+
+reggie.addEventListener("drag", dragging);
+reggie.addEventListener("dragstart", dragStart);
+
+val.addEventListener("drag", dragging);
+val.addEventListener("dragstart", dragStart);
 
 squares.forEach(square => {
   square.addEventListener("dragover", dragOver);
@@ -14,10 +40,9 @@ squares.forEach(square => {
   square.addEventListener("dragend", dragEnd);
 })
 
-
-
+// capture the thing being dragged specifically for the functions
 let beingDragged;
-
+// Dragging Functions
 function dragging(e){
   beingDragged = e.target;
   console.log(beingDragged.id + "is being dragged");
@@ -26,7 +51,7 @@ function dragging(e){
 function dragStart(e){
   beingDragged = e.target;
   console.log("dragging has started on" + beingDragged.id);
-  infoDisplay.textContent = "you are dragging a " + beingDragged.id;
+  infoDisplay.textContent = "you are dragging " + beingDragged.id;
 }
 
 function dragOver(e){
