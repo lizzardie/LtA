@@ -6,6 +6,16 @@ var infoDisplay = document.querySelector("#info");
 wren.addEventListener("drag", dragging);
 wren.addEventListener("dragstart", dragStart);
 
+squares.forEach(square => {
+  square.addEventListener("dragover", dragOver);
+  square.addEventListener("dragenter", dragEnter);
+ // square.addEventListener("dragleave", dragLeave);
+  //square.addEventListener("drop", dragDrop);
+  //square.addEventListener("dragend", dragEnd);
+})
+
+
+
 let beingDragged;
 
 function dragging(e){
@@ -16,11 +26,28 @@ function dragging(e){
 function dragStart(e){
   beingDragged = e.target;
   console.log("dragging has started on" + beingDragged.id);
-  infoDisplay.textContent = "You are dragging a " + beingDragged.id;
+  infoDisplay.textContent = "you are dragging a " + beingDragged.id;
 }
 
+function dragOver(e){
+  console.log("you are dragging something over " + e.target.classList);
+}
 
+function dragEnter(e){
+  console.log("you are entering the space of " + e.target.classList);
+}
 
+function dragLeave(e){
+  console.log("you are leaving the space of " + e.target.classList);
+}
+
+function dragDrop(e){
+  console.log("you have dropped something into " + e.target.classList);
+}
+
+function dragEnd(e){
+  console.log("the drag has ended in " + e.target.classList);
+}
 
 /*
 // it's not working,,, screams and pounds fists ig
