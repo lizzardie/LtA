@@ -1,5 +1,23 @@
-// Variables and corresponding event listeners
+// Note variables and functions
+let color = document.getElementById("color");
+let btnNote = document.getElementById("btnNote");
+let noteHolder = document.getElementById("noteholder");
 
+btnNote.onclick = () => {
+  let newNote = document.createElement("div");
+  newNote.classList.add("note");
+  newNote.innerHTML = '<span class="close">x</span>'
+  newNote.innerHTML = '<textarea placeholder="Write something here..." rows="10" cols="30"></textarea>'
+  newNote.style.borderColor = color.value;
+  noteHolder.appendChild(newNote);
+}
+
+document.addEventListener("click", (event) => {
+  console.log(event.target);
+})
+
+
+// Variables and corresponding event listeners
 var wren = document.getElementById("wren");
 var candy = document.getElementById("candy");
 var ellisra = document.getElementById("ellisra");
