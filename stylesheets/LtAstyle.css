@@ -156,6 +156,8 @@ body #conspiracyboard{
 }
 #entireboard{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .art-mini{
     width: 200px;
