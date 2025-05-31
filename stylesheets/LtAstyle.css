@@ -157,22 +157,33 @@ form{
     gap: 8px;
 }
 form input, button #btnNote{
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     padding: 0;
     border: none;
     background-color: transparent;
     font-size: large;
 }
-form input::-webkit-color-swatch-wrapper{
-    padding: 0;
-}
-form input::-webkit-color-swatch{
-    border-radius: 50%;
-}
 #noteholder textarea{
     all: unset;
-    
+}
+#noteholder .note{
+    background-color:#333333;
+    width: max-content;
+    border-top: 24px solid #e6b905;
+    border-radius: 12px;
+    padding: 12px;
+    position: absolute;
+    top: 48px;
+    left: 48px;
+}
+#noteholder .note span{
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    height: 24px;
+    font-size: large;
+    padding-right: 12px;
 }
 body #conspiracyboard{
     display: flex;
