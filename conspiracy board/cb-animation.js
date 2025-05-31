@@ -4,6 +4,7 @@ var infoDisplay = document.querySelector("#info");
 
 
 wren.addEventListener("drag", dragging);
+wren.addEventListener("dragstart", dragStart);
 
 
 
@@ -11,7 +12,9 @@ function dragging(e){
   console.log(e.target + "is being dragged");
 }
 
-
+function dragStart(e){
+  console.log("dragging has started on" + e.target);
+}
 
 
 
