@@ -14,6 +14,7 @@ function dragging(e){
 }
 
 function dragStart(e){
+  beingDragged = e.target;
   console.log("dragging has started on" + beingDragged.id);
   infoDisplay.textContent = "You are dragging a " + beingDragged.id;
 }
