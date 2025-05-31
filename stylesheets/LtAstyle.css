@@ -154,6 +154,13 @@ body #conspiracyboard{
     height: 100vw;
     flex-direction: column;
 }
+.highlight{
+    background-color: rgb(247, 167, 160);
+}
+.target{
+    border: solid 10px rgb(252, 116, 116);
+    box-sizing: border-box;
+}
 #row1{
     display: flex;
     justify-content: center;

@@ -31,22 +31,30 @@ function dragStart(e){
 
 function dragOver(e){
   console.log("you are dragging something over " + e.target.classList);
+  e.preventDefault();
 }
 
 function dragEnter(e){
   console.log("you are entering the space of " + e.target.classList);
+  e.target.classList.add("highlight");
 }
 
 function dragLeave(e){
   console.log("you are leaving the space of " + e.target.classList);
+  e.target.classList.remove("highlight");
 }
 
 function dragDrop(e){
   console.log("you have dropped something into " + e.target.classList);
+  e.target.append(beingDragged);
+  e.target.classList.remove("highlight");
 }
 
 function dragEnd(e){
   console.log("the drag has ended in " + e.target.classList);
+  e.target.classList.add("target");
+  setTimeout(() => e.target.classList.remove("target"), 100);
+  infoDisplay.textContent = "";
 }
 
 /*
