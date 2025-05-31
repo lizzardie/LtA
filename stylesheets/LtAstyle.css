@@ -150,9 +150,9 @@ textarea{
 form{
     background-color: whitesmoke;
     width: max-content;
-    padding: 4px;
+    padding: 12px;
     margin: 8px;
-    border-radius: 24px;
+    border-radius: 12px;
     display: flex;
     gap: 8px;
 }
@@ -166,6 +166,9 @@ form input, button #btnNote{
 }
 #noteholder textarea{
     all: unset;
+    color: whitesmoke;
+    font-family: courier;
+    font-size: 150%;
 }
 #noteholder .note{
     background-color:#333333;
