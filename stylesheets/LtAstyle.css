@@ -154,7 +154,12 @@ body #conspiracyboard{
     height: 100vw;
     flex-direction: column;
 }
-#entireboard{
+#row1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#row2{
     display: flex;
     justify-content: center;
     align-items: center;
