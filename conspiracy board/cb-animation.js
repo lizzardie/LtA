@@ -1,7 +1,15 @@
 var wren = document.getElementById("wrenMove");
 var squares = document.querySelectorAll(".square");
-console.log(wren);
-console.log(squares);
+var infoDisplay = document.querySelector("#info");
+
+
+wren.addEventListener("drag", dragging);
+
+
+
+function dragging(e){
+  console.log(e.target + "is being dragged");
+}
 
 
 
