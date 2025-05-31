@@ -9,9 +9,9 @@ wren.addEventListener("dragstart", dragStart);
 squares.forEach(square => {
   square.addEventListener("dragover", dragOver);
   square.addEventListener("dragenter", dragEnter);
- // square.addEventListener("dragleave", dragLeave);
-  //square.addEventListener("drop", dragDrop);
-  //square.addEventListener("dragend", dragEnd);
+  square.addEventListener("dragleave", dragLeave);
+  square.addEventListener("drop", dragDrop);
+  square.addEventListener("dragend", dragEnd);
 })
 
 
