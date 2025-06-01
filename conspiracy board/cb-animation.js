@@ -18,6 +18,8 @@ document.addEventListener("click", (event) => {
   }
 })
 
+noteHolder.addEventListener("drag", dragging);
+noteHolder.addEventListener("dragstart", dragStart);
 
 // Variables and corresponding event listeners
 var wren = document.getElementById("wren");

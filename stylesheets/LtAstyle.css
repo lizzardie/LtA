@@ -188,6 +188,7 @@ form input, button #btnNote{
     height: 24px;
     font-size: large;
     padding-right: 12px;
+    cursor: pointer;
 }
 body #conspiracyboard{
     display: flex;
