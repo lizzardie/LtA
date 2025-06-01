@@ -6,7 +6,7 @@ var noteHolder = document.getElementById("noteholder");
 btnNote.onclick = () => {
   let newNote = document.createElement("div");
   newNote.classList.add("note");
-  newNote.innerHTML = '<span class="close">x</span>', '<textarea placeholder="Write something here..." rows="10" cols="30"></textarea>';
+  newNote.innerHTML = '<textarea placeholder="Write something here..." rows="10" cols="30"></textarea>', '<span class="close">x</span>';
   newNote.style.borderColor = color.value;
   noteHolder.appendChild(newNote);
 }
