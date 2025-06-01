@@ -168,7 +168,7 @@ form input, button #btnNote{
     all: unset;
     color: whitesmoke;
     font-family: courier;
-    font-size: 100%;
+    font-size: 75%;
 }
 #noteholder .note{
     background-color:#333333;
