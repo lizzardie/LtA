@@ -173,10 +173,9 @@ form input, button #btnNote{
 #noteholder .note{
     background-color:#333333;
     width: 200px;
-    height: 200px;
+    height: 176px;
     border-top: 24px solid #e6b905;
-    border-radius: 12px;
-    padding: 12px;
+    padding: 6px;
 }
 #noteholder .note span{
     position: absolute;

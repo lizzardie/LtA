@@ -1,14 +1,14 @@
 // Note variables and functions
 var color = document.getElementById("color");
 var btnNote = document.getElementById("btnNote");
-var noteHolder = document.getElementById("noteholder");
+var note = document.getElementById("noteholder");
 
 btnNote.onclick = () => {
   let newNote = document.createElement("div");
   newNote.classList.add("note");
-  newNote.innerHTML = '<textarea placeholder="Write something here..." rows="10" cols="30"></textarea>', '<span class="close">x</span>';
+  newNote.innerHTML = '<textarea placeholder="Write something here..." rows="10" cols="30"></textarea> <span class="close">x</span>';
   newNote.style.borderColor = color.value;
-  noteHolder.appendChild(newNote);
+  note.appendChild(newNote);
 }
 
 document.addEventListener("click", (event) => {
