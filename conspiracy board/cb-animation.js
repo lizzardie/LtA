@@ -88,6 +88,7 @@ function noteSpawn(){
   noteDiv.append(noteSpan); 
 
   noteDiv.style.borderColor = color.value;
+  noteDiv.setAttribute("draggable");
   // WORK ON THIS FUNCTION
     // MATCH THE WAY THE DICE FUNCTION IS USED TO SPAWN DICE
     // FOR THE NOTES

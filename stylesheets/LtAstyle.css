@@ -170,10 +170,7 @@ form input, button #btnNote{
     font-family: courier;
     font-size: 75%;
 }
-.note-text{
-    rows: 10;
-    columns: 30;
-}
+
 .note{
     background-color:#333;
     width: 200px;
