@@ -1,3 +1,18 @@
+function noteHolderSpawn(){
+  noteHolderDiv = document.createElement("div");
+  noteHolderDiv.className = "note";
+
+    d6Number = document.createElement("p");
+    d6Number.textContent = "6";
+    d6Number.className = "numbers d6Numbers"
+
+    document.getElementById("dice-container-id").append(d6Div);
+    d6Div.append(d6Number); // WORK ON THIS FUNCTION
+    // MATCH THE WAY THE DICE FUNCTION IS USED TO SPAWN DICE
+    // FOR THE NOTES
+}
+
+
 // Note variables and functions
 var color = document.getElementById("color");
 var btnNote = document.getElementById("btnNote");
