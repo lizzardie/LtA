@@ -28,8 +28,7 @@ var val = document.getElementById("val");
 
 var color = document.getElementById("color");
 var btnNote = document.getElementById("btnNote");
-var noteDiv;
-noteDiv.className = "note";
+var noteDiv = document.getElementById("note");
 
 var squares = document.querySelectorAll(".square");
 var infoDisplay = document.querySelector("#info");
