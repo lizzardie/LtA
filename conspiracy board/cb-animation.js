@@ -77,7 +77,7 @@ function noteSpawn(){
   noteSpan.textContent = "x";
   noteSpan.className = "close";
 
-  document.getElementById("square").append(noteDiv);
+  document.getElementsByClassName("square white").append(noteDiv);
   noteDiv.append(noteText);
   noteDiv.append(noteSpan); 
 
