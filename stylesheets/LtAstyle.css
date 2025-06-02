@@ -182,8 +182,11 @@ form input, button #btnNote{
 .note span{
     position: absolute;
     height: 24px;
+    color: whitesmoke;
     font-size: large;
     cursor: pointer;
+    right: 0;
+    top: 0;
 }
 body #conspiracyboard{
     display: flex;
