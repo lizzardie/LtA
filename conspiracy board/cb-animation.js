@@ -1,10 +1,4 @@
 
-
-
-// Note variables and functions
-
-
-
 /*
 var note = document.getElementById("noteholder");
 btnNote.onclick = () => {
@@ -22,7 +16,6 @@ document.addEventListener("click", (event) => {
   }
 })
 */
-
 
 // Variables and corresponding event listeners
 var wren = document.getElementById("wren");
@@ -89,6 +82,9 @@ function noteSpawn(){
 
   noteDiv.style.borderColor = color.value;
   noteDiv.setAttribute("draggable");
+
+  noteDiv.addEventListener("drag", dragging);
+  noteDiv.addEventListener("dragstart", dragStart);
   // WORK ON THIS FUNCTION
     // MATCH THE WAY THE DICE FUNCTION IS USED TO SPAWN DICE
     // FOR THE NOTES
