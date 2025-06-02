@@ -9,10 +9,11 @@
 </head>
 <body id="conspiracyboard">
     <p>Return to <a href="/LtA/index.html" class="button">Homepage.</a></p>
+    <p id="info"></p>
     <div>
         <form action="">
             <input type="color" id="color" value="#e6b905">
-            <button type="button" id="btnNote">+</button>
+            <button type="button" onclick="new noteSpawn()" id="btnNote">+</button>
         </form>
     </div>
 
@@ -41,11 +42,9 @@
     </div>
     <div id="row2">
         <div class="square white">
-            <div class="noteHolder" id="noteholder">
-                <div class="note" id="note" draggable>
-                    <span class="close">x</span>
-                    <textarea placeholder="Write something here..." rows="10" cols="30"></textarea>
-                </div>
+            <div class="note" id="note" draggable>
+                <span class="close">x</span>
+                <textarea placeholder="Write something here..." rows="10" cols="30" class="note-text"></textarea>
             </div>
         </div>
         <div class="square grey"></div>
@@ -73,8 +72,6 @@
         <div class="square grey"></div>
         <div class="square white"></div>
     </div>
-
-    <p id="info"></p>
     
 
     

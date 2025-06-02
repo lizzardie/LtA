@@ -164,20 +164,24 @@ form input, button #btnNote{
     background-color: transparent;
     font-size: large;
 }
-#noteholder textarea{
+.note textarea{
     all: unset;
     color: whitesmoke;
     font-family: courier;
     font-size: 75%;
 }
-#noteholder .note{
-    background-color:#333333;
-    width: 176px;
+.note-text{
+    rows: 10;
+    columns: 30;
+}
+.note{
+    background-color:#333;
+    width: 200px;
     height: 176px;
     border-top: 24px solid #e6b905;
     padding: 6px;
 }
-#noteholder .note span{
+.note span{
     position: absolute;
     bottom: 100%;
     right: 0;
@@ -265,7 +269,7 @@ body #conspiracyboard{
 .dice-container{
     display: grid;
     width: 100vw;
-    height: 200px;
+    height: fit-content;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     justify-content: space-evenly;

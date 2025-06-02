@@ -1,23 +1,12 @@
-function noteHolderSpawn(){
-  noteHolderDiv = document.createElement("div");
-  noteHolderDiv.className = "note";
 
-    d6Number = document.createElement("p");
-    d6Number.textContent = "6";
-    d6Number.className = "numbers d6Numbers"
-
-    document.getElementById("dice-container-id").append(d6Div);
-    d6Div.append(d6Number); // WORK ON THIS FUNCTION
-    // MATCH THE WAY THE DICE FUNCTION IS USED TO SPAWN DICE
-    // FOR THE NOTES
-}
 
 
 // Note variables and functions
-var color = document.getElementById("color");
-var btnNote = document.getElementById("btnNote");
-var note = document.getElementById("noteholder");
 
+
+
+/*
+var note = document.getElementById("noteholder");
 btnNote.onclick = () => {
   let newNote = document.createElement("div");
   newNote.classList.add("note");
@@ -32,9 +21,8 @@ document.addEventListener("click", (event) => {
     event.target.parentNode.remove();
   }
 })
+*/
 
-note.addEventListener("drag", dragging);
-note.addEventListener("dragstart", dragStart);
 
 // Variables and corresponding event listeners
 var wren = document.getElementById("wren");
@@ -44,6 +32,9 @@ var joanna = document.getElementById("joanna");
 var pep = document.getElementById("pep");
 var reggie = document.getElementById("reggie");
 var val = document.getElementById("val");
+
+var color = document.getElementById("color");
+var btnNote = document.getElementById("btnNote");
 
 var squares = document.querySelectorAll(".square");
 var infoDisplay = document.querySelector("#info");
@@ -69,6 +60,9 @@ reggie.addEventListener("dragstart", dragStart);
 val.addEventListener("drag", dragging);
 val.addEventListener("dragstart", dragStart);
 
+noteDiv.addEventListener("drag", dragging);
+noteDiv.addEventListener("dragstart", dragStart);
+
 squares.forEach(square => {
   square.addEventListener("dragover", dragOver);
   square.addEventListener("dragenter", dragEnter);
@@ -76,6 +70,28 @@ squares.forEach(square => {
   square.addEventListener("drop", dragDrop);
   square.addEventListener("dragend", dragEnd);
 })
+
+function noteSpawn(){
+  noteDiv = document.createElement("div");
+  noteDiv.className = "note";
+
+  noteText = document.createElement("textarea");
+  noteText.textContent = "Write something here";
+  noteText.className = "note-text";
+
+  noteSpan = document.createElement("span");
+  noteSpan.textContent = "x";
+  noteSpan.className = "close";
+
+  document.getElementById("square").append(noteDiv);
+  noteDiv.append(noteText);
+  noteDiv.append(noteSpan); 
+
+  noteDiv.style.borderColor = color.value;
+  // WORK ON THIS FUNCTION
+    // MATCH THE WAY THE DICE FUNCTION IS USED TO SPAWN DICE
+    // FOR THE NOTES
+}
 
 // capture the thing being dragged specifically for the functions
 let beingDragged;
