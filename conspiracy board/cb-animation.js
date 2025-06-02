@@ -32,6 +32,9 @@ var noteDiv = document.getElementById("note");
 
 var squares = document.querySelectorAll(".square");
 var infoDisplay = document.querySelector("#info");
+var occupiedImg = document.querySelectorAll(".art-mini");
+var occupiedText = document.querySelectorAll(".note");
+var occupied;
 
 wren.addEventListener("drag", dragging);
 wren.addEventListener("dragstart", dragStart);
@@ -63,11 +66,21 @@ squares.forEach(square => {
   square.addEventListener("dragleave", dragLeave);
   square.addEventListener("drop", dragDrop);
   square.addEventListener("dragend", dragEnd);
+  square.addEventListener("notice", noticeOccupied);
 })
+
+function noticeOccupied(){
+  squares.forEach(square => {
+    if(square.contains(".art-mini") || square.contains(".note")){
+      occupied == "true";
+    }
+  })
+}
 
 function noteSpawn(){
   noteDiv = document.createElement("div");
   noteDiv.className = "note";
+  noteDiv.id = "note";
 
   noteText = document.createElement("textarea");
   noteText.textContent = "Write something here";
@@ -86,9 +99,6 @@ function noteSpawn(){
 
   noteDiv.addEventListener("drag", dragging);
   noteDiv.addEventListener("dragstart", dragStart);
-  // WORK ON THIS FUNCTION
-    // MATCH THE WAY THE DICE FUNCTION IS USED TO SPAWN DICE
-    // FOR THE NOTES
 }
 
 // capture the thing being dragged specifically for the functions
@@ -107,31 +117,38 @@ function dragStart(e){
 
 function dragOver(e){
   console.log("you are dragging something over " + e.target.classList);
-  e.preventDefault();
+  squares.forEach(square => {
+    if (occupied == "false"){
+    e.preventDefault();
+  }
+  })
 }
 
+// i think the highlights aren't working b/c the imgs fill the entire space, covering it?
 function dragEnter(e){
-  console.log("you are entering the space of " + e.target.classList);
+  console.log("you are entering the space with " + e.target.classList);
   e.target.classList.add("highlight");
 }
 
 function dragLeave(e){
-  console.log("you are leaving the space of " + e.target.classList);
+  console.log("you are leaving the space with " + e.target.classList);
   e.target.classList.remove("highlight");
 }
 
 function dragDrop(e){
-  console.log("you have dropped something into " + e.target.classList);
+  console.log("you have dropped " + e.target.classList);
   e.target.append(beingDragged);
   e.target.classList.remove("highlight");
 }
 
 function dragEnd(e){
-  console.log("the drag has ended in " + e.target.classList);
+  console.log("the drag of " + e.target.classList + " has ended");
   e.target.classList.add("target");
   setTimeout(() => e.target.classList.remove("target"), 100);
   infoDisplay.textContent = "";
 }
+
+
 
 /*
 // it's not working,,, screams and pounds fists ig
