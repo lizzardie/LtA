@@ -106,7 +106,7 @@ let beingDragged;
 // Dragging Functions
 function dragging(e){
   beingDragged = e.target;
-  console.log(beingDragged.id + "is being dragged");
+  console.log(beingDragged.id + " is being dragged");
 }
 
 function dragStart(e){
