@@ -119,7 +119,8 @@ function dragOver(e){
   console.log("you are dragging something over " + e.target.classList);
   squares.forEach(square => {
     if (occupied == "false"){
-    e.preventDefault();
+      console.log(occupied);
+      e.preventDefault();
   }
   })
 }
