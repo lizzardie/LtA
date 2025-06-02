@@ -184,7 +184,7 @@ form input, button #btnNote{
     right: 0;
     height: 24px;
     font-size: large;
-    padding-right: 12px;
+    padding-right: 16px;
     cursor: pointer;
 }
 body #conspiracyboard{
