@@ -117,12 +117,15 @@ function dragStart(e){
 
 function dragOver(e){
   console.log("you are dragging something over " + e.target.classList);
+  e.preventDefault();
+  /*
   squares.forEach(square => {
     if (occupied == "false"){
       console.log(occupied);
       e.preventDefault();
   }
   })
+  */
 }
 
 // i think the highlights aren't working b/c the imgs fill the entire space, covering it?
