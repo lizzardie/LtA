@@ -32,9 +32,9 @@ var noteDiv = document.getElementById("note");
 
 var squares = document.querySelectorAll(".square");
 var infoDisplay = document.querySelector("#info");
-var occupiedImg = document.querySelectorAll(".art-mini");
-var occupiedText = document.querySelectorAll(".note");
-var occupied;
+var hasImg = document.querySelectorAll(".art-mini");
+var hasText = document.querySelectorAll(".note");
+var full;
 
 wren.addEventListener("drag", dragging);
 wren.addEventListener("dragstart", dragStart);
@@ -66,16 +66,19 @@ squares.forEach(square => {
   square.addEventListener("dragleave", dragLeave);
   square.addEventListener("drop", dragDrop);
   square.addEventListener("dragend", dragEnd);
-  square.addEventListener("notice", noticeOccupied);
+  square.addEventListener("hasItem", hasItem);
 })
 
-function noticeOccupied(){
-  squares.forEach(square => {
-    if(square.contains(".art-mini") || square.contains(".note")){
-      occupied == "true";
-    }
-  })
+
+/* how do i make this function only applied occupied to one square at a time? */ 
+
+function hasItem(){
+  if(square.contains(hasImg) || square.contains(hasText)) {
+    full == "true";
+  }
 }
+
+
 
 function noteSpawn(){
   noteDiv = document.createElement("div");
@@ -117,7 +120,12 @@ function dragStart(e){
 
 function dragOver(e){
   console.log("you are dragging something over " + e.target.classList);
-  e.preventDefault();
+  
+  if (square.full == "true") {
+    null;
+  } else {
+    e.preventDefault();
+  }
   /*
   squares.forEach(square => {
     if (occupied == "false"){
