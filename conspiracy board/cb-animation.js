@@ -69,17 +69,6 @@ squares.forEach(square => {
   square.addEventListener("hasItem", hasItem);
 })
 
-
-/* how do i make this function only applied occupied to one square at a time? */ 
-
-function hasItem(){
-  if(square.contains(hasImg) || square.contains(hasText)) {
-    full == "true";
-  }
-}
-
-
-
 function noteSpawn(){
   noteDiv = document.createElement("div");
   noteDiv.className = "note";
@@ -106,6 +95,8 @@ function noteSpawn(){
 
 // capture the thing being dragged specifically for the functions
 let beingDragged;
+let square;
+
 // Dragging Functions
 function dragging(e){
   beingDragged = e.target;
@@ -118,9 +109,21 @@ function dragStart(e){
   infoDisplay.textContent = "you are dragging " + beingDragged.id;
 }
 
+/* how do i make this function only applied occupied to one square at a time? */ 
+
+function hasItem(){
+  if(square.contains(hasImg) || square.contains(hasText)) {
+    full == "true";
+  }
+}
+
+
 function dragOver(e){
+  square = e.target;
   console.log("you are dragging something over " + e.target.classList);
   
+
+
   if (square.full == "true") {
     null;
   } else {
