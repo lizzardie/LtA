@@ -112,7 +112,8 @@ function dragStart(e){
 }
 
 function dragOver(e){
-  console.log("you are dragging " + e.target.classList + " over " + square.classList);
+  beingDragged = e.target
+  console.log("you are dragging " + beingDragged.id + " over " + square.classList);
   if (square.className.includes("full")) {
     null;
   } else {
@@ -128,7 +129,8 @@ function dragEnter(e){
 }
 
 function dragLeave(e){
-  console.log("you are leaving the space with " + e.target.classList);
+  beingDragged = e.target
+  console.log("you are leaving the space of " + square.classList + " with " + e.target.id);
   e.target.classList.remove("full");
 }
 
