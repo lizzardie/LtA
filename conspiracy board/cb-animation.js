@@ -131,7 +131,7 @@ function dragEnter(e){
 function dragLeave(e){
   beingDragged = e.target
   console.log("you are leaving the space of " + square.classList + " with " + e.target.id);
-  e.target.classList.remove("full");
+  square.classList.remove("full");
 }
 
 function dragDrop(e){
