@@ -122,13 +122,13 @@ function dragOver(e){
 }
 
 function dragEnter(e){
-  beingDragged = e.target;
+  square = e.target;
   console.log("you are entering the space of " + square.classList);
 }
 
 function dragLeave(e){
-  beingDragged = e.target;
-  console.log("you are leaving the space of " + square.classList + " with " + e.target.id);
+  square = e.target;
+  console.log("you are leaving the space of " + square.classList + " with " + beingDragged.id);
   square.classList.remove("full");
 }
 
