@@ -129,12 +129,13 @@ function dragEnter(e){
 }
 
 function dragLeave(e){
-  beingDragged = e.target
+  beingDragged = e.target;
   console.log("you are leaving the space of " + square.classList + " with " + e.target.id);
   square.classList.remove("full");
 }
 
 function dragDrop(e){
+  beingDragged = e.target;
   console.log("you have dropped " + e.target.classList);
   e.target.append(beingDragged);
 }
