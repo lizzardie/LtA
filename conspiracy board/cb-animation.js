@@ -112,7 +112,7 @@ function dragStart(e){
 }
 
 function dragOver(e){
-  beingDragged = e.target;
+  square = e.target;
   console.log("you are dragging " + beingDragged.id + " over " + square.classList);
   if (square.className.includes("full")) {
     null;
