@@ -112,7 +112,7 @@ function dragStart(e){
 }
 
 function dragOver(e){
-  beingDragged = e.target
+  beingDragged = e.target;
   console.log("you are dragging " + beingDragged.id + " over " + square.classList);
   if (square.className.includes("full")) {
     null;
@@ -121,11 +121,9 @@ function dragOver(e){
   }
 }
 
-// i think the highlights aren't working b/c the imgs fill the entire space, covering it?
 function dragEnter(e){
-  square = e.target;
-  console.log("you are entering the space of " + e.target.classList);
-  
+  beingDragged = e.target;
+  console.log("you are entering the space of " + square.classList);
 }
 
 function dragLeave(e){
@@ -137,10 +135,10 @@ function dragLeave(e){
 function dragDrop(e){
   beingDragged = e.target;
   console.log("you have dropped " + e.target.classList);
-  e.target.append(beingDragged);
 }
 
 function dragEnd(e){
+  beingDragged = e.target;
   console.log("the drag of " + e.target.classList + " has ended in " + square.classList);
   square.classList.add("full");
   e.target.classList.add("target");
