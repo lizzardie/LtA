@@ -32,9 +32,11 @@ var noteDiv = document.getElementById("note");
 
 var squares = document.querySelectorAll(".square");
 var infoDisplay = document.querySelector("#info");
+/*
 var hasImg = document.querySelectorAll(".art-mini");
 var hasText = document.querySelectorAll(".note");
-var full;
+*/
+var full = document.querySelector(".full")
 
 wren.addEventListener("drag", dragging);
 wren.addEventListener("dragstart", dragStart);
@@ -66,7 +68,6 @@ squares.forEach(square => {
   square.addEventListener("dragleave", dragLeave);
   square.addEventListener("drop", dragDrop);
   square.addEventListener("dragend", dragEnd);
-  square.addEventListener("hasItem", hasItem);
 })
 
 function noteSpawn(){
@@ -111,20 +112,11 @@ function dragStart(e){
 
 /* how do i make this function only applied occupied to one square at a time? */ 
 
-function hasItem(){
-  if(square.contains(hasImg) || square.contains(hasText)) {
-    full == "true";
-  }
-}
-
 
 function dragOver(e){
-  square = e.target;
   console.log("you are dragging something over " + e.target.classList);
-  
 
-
-  if (square.full == "true") {
+  if (e.target.className.includes("full")) {
     null;
   } else {
     e.preventDefault();
@@ -142,18 +134,17 @@ function dragOver(e){
 // i think the highlights aren't working b/c the imgs fill the entire space, covering it?
 function dragEnter(e){
   console.log("you are entering the space with " + e.target.classList);
-  e.target.classList.add("highlight");
+  e.target.classList.add("full");
 }
 
 function dragLeave(e){
   console.log("you are leaving the space with " + e.target.classList);
-  e.target.classList.remove("highlight");
+  e.target.classList.remove("full");
 }
 
 function dragDrop(e){
   console.log("you have dropped " + e.target.classList);
   e.target.append(beingDragged);
-  e.target.classList.remove("highlight");
 }
 
 function dragEnd(e){
