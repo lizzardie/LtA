@@ -96,7 +96,7 @@ function noteSpawn(){
 
 // capture the thing being dragged specifically for the functions
 let beingDragged;
-let square;
+let square = squares;
 let full;
 
 // Dragging Functions
