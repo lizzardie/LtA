@@ -180,7 +180,7 @@ form input, button #btnNote{
     border-top: 24px solid #e6b905;
 }
 .note span{
-    position: absolute;
+    position: relative;
     height: 24px;
     color: whitesmoke;
     font-size: large;
