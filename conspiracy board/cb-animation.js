@@ -133,8 +133,12 @@ function dragLeave(e){
 }
 
 function dragDrop(e){
-  
   console.log("you have dropped " + beingDragged.id);
+  if (square.className.includes("full")) {
+    null;
+  } else {
+    e.preventDefault();
+  }
 }
 
 function dragEnd(e){
