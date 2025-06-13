@@ -133,8 +133,8 @@ function dragLeave(e){
 }
 
 function dragDrop(e){
-  beingDragged = e.target;
-  console.log("you have dropped " + e.target.id);
+  
+  console.log("you have dropped " + beingDragged.id);
 }
 
 function dragEnd(e){
