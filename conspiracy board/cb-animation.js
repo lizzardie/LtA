@@ -135,6 +135,7 @@ function dragLeave(e){
 function dragDrop(e){
   beingDragged = e.target;
   console.log("you have dropped " + e.target.classList);
+  e.target.append(beingDragged);
 }
 
 function dragEnd(e){
