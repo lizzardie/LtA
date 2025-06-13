@@ -112,8 +112,8 @@ function dragStart(e){
 }
 
 function dragOver(e){
-  beingDragged = e.target;
-  console.log("you are dragging " + e.target.id + " over " + square.classList);
+  square = e.target;
+  console.log("you are dragging " + beingDragged.id + " over " + square.classList);
   if (square.className.includes("full")) {
     null;
   } else {
@@ -133,6 +133,7 @@ function dragLeave(e){
 }
 
 function dragDrop(e){
+  beingDragged = e.target;
   console.log("you have dropped " + beingDragged.id);
   if (square.className.includes("full")) {
     null;
@@ -143,7 +144,7 @@ function dragDrop(e){
 
 function dragEnd(e){
   beingDragged = e.target;
-  console.log("the drag of " + e.target.classList + " has ended in " + square.classList);
+  console.log("the drag of " + e.target.id + " has ended in " + square.classList);
   square.classList.add("full");
   e.target.classList.add("target");
   setTimeout(() => e.target.classList.remove("target"), 100);
